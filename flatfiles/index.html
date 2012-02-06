@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<title>CrashPad.html</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:300,700' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='vendor/css/jquery.selectBox.css' type='text/css' media='screen' />
+	<link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' />
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+  <script src='vendor/js/jquery.selectBox.min.js'></script>
+  <script type='text/javascript' charset='utf-8'>
+    $(function() {
+      // Initialize jQuery SelectBox
+      $('#looking-for').selectBox();
+      // Load user background image into css
+      $('html').css('background-image', 'url(' + $('#background-cover').attr('src') + ')');
+    });
+  </script>
+  <script src='vendor/js/html5.js'></script>
+	<script src='vendor/js/respond.min.js'></script>
+	<script src='js/cover.js'></script>
+</head>
+<body>
+  <header id='topbar'>
+    <nav id='global-menu'>
+      <ul>
+        <li><a href='#'>My profile</a></li>
+        <li><a href='#'>Add my place</a></li>
+        <li><a href='#'>Add current roommates</a></li>
+        <li><a href='#'>Favorites</a></li>
+        <li><a href='http://google.com'>Settings &#9662;&nbsp;</a></li>
+      </ul>
+    </nav>
+    <nav id='mobile-menu'>
+      <a href='#'>Menu &#9662;&nbsp;</a>
+    </nav>
+    <div id='logo'>CrashPad</div>
+  </header>
+  <div id='content'>
+  	<div id='responsive-layout'>
+      <aside id='sidebar'>
+        <div class='profile-pic-container'><img src='user-images/girl.jpg' /></div>
+        <div class='situation'>
+          <h4><strong>Roommate</strong> wanted in</h4>
+          <em>Cole Valley, San Francisco, CA</em>
+          <em>SOMA, San Francisco, CA</em>
+          <em>Noe Valley, San Francisco, CA</em>
+          <!-- <div style="overflow: hidden;"> -->
+          <h5>Looking with</h5>
+          <div class='roommates'>
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+          </div>
+          <!-- </div> -->
+        
+          <!-- Modal Dialogs for Edit Mode -->
+          <section class='editor'>
+            <span class='close'><img src='images/x.png' /></span>
+            <label for='looking-for'>Looking for</label>
+            <select id='looking-for'>
+              <option>roommate + place</option>
+            </select>
+            <label for='neighborhood'>Where do you want to live?</label>
+            <input id='neighborhood' value='city/neighborhood/zip' />
+            <button class='list-btn lightgrey-btn'>-</button>
+            <button class='list-btn grey-btn'>+</button>
+            <button class='submit-btn darkgrey-btn'>Preview</button>
+          </section>
+        
+        </div>
+        <button class='contact-me blue-btn'>Contact me</button>
+        <div class='last-login'><strong>Last login:</strong> today!</div>
+      </aside>
+      <aside id='mobile-only'>
+        <div class='profile-pic-container'><img src='user-images/girl.jpg' /></div>
+        <div id='profile'>
+          <h1 class='name'>Alexandra A.</h1>
+          <h2 class='tagline'>the best roommate you'll ever have or your money back</h2>
+          <button class='contact-me blue-btn'>Contact me</button>
+          <div class='last-login'><strong>Last login:</strong> today!</div>
+        </div>
+        <div class='situation'>
+          <h4><strong>Roommate</strong> wanted in</h4>
+          <em>Cole Valley, San Francisco, CA</em>
+          <em>SOMA, San Francisco, CA</em>
+          <em>Noe Valley, San Francisco, CA</em>
+          <h5>Looking with</h5>
+          <div class='roommates'>
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+            <img src='user-images/roommate.jpg' />
+          </div>
+        </div>
+      </aside>
+  		<div id='main'>
+  		  <header>
+  		    <h1 class='name'>Alexandra A.</h1>
+  		    <h2 class='tagline'>the best roommate you'll ever have or your money back</h2>
+		    </header>
+  			<section id='feed'>
+  			  <article>
+  			    <span class='date'>MAR 3</span><h3>Latest earworms</h3>
+  			    <p>
+    			    <strong>You've Got the Love (remix)</strong> &mdash; The xx feat. Florence + the Machine
+    			  </p>
+  			    <p>
+    			    <strong>I Follow Rivers</strong> &mdash; Lykke Li
+    			  </p>
+    			</article>
+    			<article>
+            <span class='date'>MAR 2</span><h3>Latest captures</h3>
+  			    <p class='gallery'>
+    			    <img src='user-images/icon1.jpg' />
+    			    <img src='user-images/icon2.jpg' />
+    			    <img src='user-images/icon3.jpg' />
+    			    <img src='user-images/icon4.jpg' />
+    			    <img src='user-images/icon5.jpg' />
+    			  </p>
+  			  </article>
+  			</section>
+  		</div>
+  	</div>
+  </div>
+
+  <!-- Pullup Box for Creating/Sharing Profiles -->
+  <footer>
+    <div id='handle'>Create my profile</div>
+    <div id='neck'></div>
+    <div id='trunk'>
+      oaeutnh<br/>
+      oaeutnh<br/>
+      oaeutnh<br/>
+      oaeutnh<br/>
+    </div>
+  </footer>
+  <div id='dim'></div>
+
+  <!-- Footer for Displaying User Messages -->
+  <!-- <footer id='message'>
+    oaeutnh<br/>
+    oaeutnh<br/>
+    oaeutnh<br/>
+    oaeutnh<br/>
+  </footer> -->
+  
+  <img id='background-cover' src='user-images/background-scenic.jpg' data-width='980' data-height='600' />
+</body>
+</html>

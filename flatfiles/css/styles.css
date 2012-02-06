@@ -1,0 +1,656 @@
+/* CSS Resets */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+
+/* 
+  I. Typography 
+    1. Headers: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    2. Body content: 'Lato', 'Helvetica Neue', Tahoma, sans-serif;
+*/
+
+/* ============================= */
+/* ! Layout for 800px - 1382px   */
+/* ============================= */
+
+  html { /* full screen backrgound for modern browsers */
+    background: #333 center top no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #background-cover { /* full screen background for IE8 and below */
+    display: none;
+    position: fixed;
+    z-index: -1;
+  }
+  body {
+    color: #FFF;
+    font: 300 1em 'Lato', 'Helvetica Neue', Tahoma, sans-serif;
+    padding-top: 50px;
+  }
+  img, object, embed {
+    max-width: 100%;
+  }
+  img {
+    height: auto;
+  }
+  strong { /* for Google Web Font */
+    font-weight: 700;
+  }
+  button {
+    cursor: pointer;
+  }
+  .submit-btn {
+    display: block;
+    float: right;
+  }
+  .blue-btn {
+    background: #78C3EE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#86D1FD), to(#285874));
+    background-image: -webkit-linear-gradient(top, #86D1FD, #285874);
+    background-image:    -moz-linear-gradient(top, #86D1FD, #285874);
+    background-image:     -ms-linear-gradient(top, #86D1FD, #285874);
+    background-image:      -o-linear-gradient(top, #86D1FD, #285874);
+    background-image:         linear-gradient(to bottom, #86D1FD, #285874);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#86D1FD', endColorstr='#285874');
+    border: 1px solid #447EA2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #FFF;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px -2px 1px #777;
+  }
+  .lightgrey-btn {
+    background: #E1E1E1;
+    border: 1px solid #8D8D8D;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+    color: #ACACAC;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px -1px 1px #DDD;
+  }
+  .grey-btn {
+    background: #AAAAAA;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#C0C0C0), to(#AAAAAA));
+    background-image: -webkit-linear-gradient(top, #C0C0C0, #AAAAAA);
+    background-image:    -moz-linear-gradient(top, #C0C0C0, #AAAAAA);
+    background-image:     -ms-linear-gradient(top, #C0C0C0, #AAAAAA);
+    background-image:      -o-linear-gradient(top, #C0C0C0, #AAAAAA);
+    background-image:         linear-gradient(to bottom, #C0C0C0, #AAAAAA);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C0C0C0', endColorstr='#AAAAAA');
+    border: 1px solid #8D8D8D;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #666666;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px -1px 1px #DDD;
+  }
+  .darkgrey-btn {
+    background: #AAAAAA;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#AFAEAE), to(#6D6D6D));
+    background-image: -webkit-linear-gradient(top, #AFAEAE, #6D6D6D);
+    background-image:    -moz-linear-gradient(top, #AFAEAE, #6D6D6D);
+    background-image:     -ms-linear-gradient(top, #AFAEAE, #6D6D6D);
+    background-image:      -o-linear-gradient(top, #AFAEAE, #6D6D6D);
+    background-image:         linear-gradient(to bottom, #AFAEAE, #6D6D6D);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFAEAE', endColorstr='#6D6D6D');
+    border: 1px solid #908F8F;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #FFF;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px -2px 2px #777;
+  }
+  label {
+    display: block;
+  }
+  #topbar {
+    background: #39393B;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#39393B), to(#222325));
+    background-image: -webkit-linear-gradient(top, #39393B, #222325);
+    background-image:    -moz-linear-gradient(top, #39393B, #222325);
+    background-image:     -ms-linear-gradient(top, #39393B, #222325);
+    background-image:      -o-linear-gradient(top, #39393B, #222325);
+    background-image:         linear-gradient(to bottom, #39393B, #222325);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#39393B', endColorstr='#222325');
+    border-bottom: 1px solid #343434;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 0 2% 4px;
+    position: fixed;
+    top: 0;
+    line-height: 1.875em;
+    z-index: 1;
+  }
+  #logo {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    display: inline-block;
+    width: 100px;
+  }
+  nav {
+    float: right;
+  }
+  nav li {
+    display: inline;
+    padding-left: 12px;
+  }
+  nav a {
+    color: #AAAAAA;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 0.8125em;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  #mobile-menu {
+    display: none;
+  }
+  #content {
+    padding: 0 20px;
+    position: relative;
+  }
+  #responsive-layout {
+    width: 100%;
+    max-width: 950px;
+    min-width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #sidebar {
+    float: left;
+    padding: .8%;
+    margin-right: 0;
+    min-height: 1px;
+    width: 28.8%;
+  }
+  #mobile-only {
+    display: none;
+  }
+  .profile-pic-container {
+    margin-right: 16px;
+    position: relative;
+  }
+  .profile-pic-container img {
+    border: 8px solid #FFF;
+  }
+  .situation {
+    background: rgb(246, 246, 214);
+    background: rgba(246, 246, 214, .95);
+    color: #000;
+    margin: -6px 5px 0 5px;
+    position: relative;
+  }
+  .situation:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+  .situation h4 {
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 0.9375em;
+    font-weight: 400;
+    padding: 12px 20px 9px 20px;
+    text-align: center;
+  }
+  .situation em {
+    color: #333;
+    display: block;
+    font-size: 0.9375em;
+    font-style: normal;
+    padding: 0 15px 3px 20px;
+  }
+  .situation h5 {
+    float: left;
+    font-size: 0.6875em;
+    padding: 12px 0 20px 20px;
+    text-transform: uppercase;
+    width: 50px;
+    vertical-align: top;
+  }
+  .roommates {
+    padding: 12px 20px;
+    text-align: right;
+    float: right;
+    width: 59%;
+  }
+  .roommates img {
+    height: 30px;
+    padding-left: 7px;
+    width: 30px;
+    margin-bottom: 7px;
+  }
+  .contact-me {
+    font-size: 1.3125em;
+    margin-top: 25px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .last-login {
+    font-size: .9375em;
+    font-weight: 400;
+    margin: 15px 0 0 20px;
+  }
+  .last-login strong {
+    font-size: .9333em;
+    font-weight: 700;
+  }
+  .situation .editor {
+    background: #EFEFEF;
+    box-shadow: 1px 1px 6px 2px #444;
+    -webkit-box-shadow: 1px 1px 6px 2px #444;
+    -moz-box-shadow: 1px 1px 6px 2px #444;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #333333;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    left: -5px;
+    padding: 20px 20px 15px 20px;
+    position: absolute;
+    text-shadow: 1px -2px 1px #EFEFEF;
+    top: -15px;
+    min-width: 290px;
+    width: 100%;
+    z-index: 2;
+/*    display: none;*/
+  }
+  .situation .close {
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin: -12px -12px 0 0;
+    width: 17px;
+  }
+  .situation label {
+    padding-bottom: 8px;
+  }
+  .situation select {
+    font-size: 1em;
+    line-height: 2em;
+    margin-bottom: 15px;
+    width: 290px;
+  }
+  .situation .selectBox {
+    height: 28px;
+    margin-bottom: 15px;
+  }
+  .situation input {
+    border: 1px solid #AAAAAA;
+    color: #999999;
+    font-size: .875em;
+    margin-bottom: 15px;
+    padding: 6px 7px 7px 7px;
+    width: 60%;
+  }
+  .situation .list-btn {
+    font-size: 2em;
+    height: 32px;
+    line-height: .75em;
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
+  .situation .lightgrey-btn {
+    margin-left: 10px;
+    padding: 2px 6px 4px 8px;
+  }
+  .situation .grey-btn {
+    color: #222222;
+    margin-left: 5px;
+    padding: 3px 6px 3px;
+  }
+  .situation .darkgrey-btn {
+    font-size: 1em;
+    padding: 9px 20px;
+  }
+  #main {
+    float: left;
+    margin: 0 .8% 0 4.8%;
+    min-height: 1px;
+    width: 63.8%;
+  }
+  .name {
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    margin: 0 0 5px 30px;
+    text-shadow: 1px -2px 2px #333;
+  }
+  .tagline {
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 0 15px 30px;
+    text-shadow: 1px 1px 2px #111;
+  }
+  #feed {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .83);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#D4000000, endColorstr=#D4000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D4000000, endColorstr=#D4000000)";
+    border: 1px solid #CCC;
+    padding: 10px 40px 35px;
+    margin-top: 10px;
+  }
+  #feed article {
+    margin-top: 25px;
+  }
+  #feed h3 {
+    color: #AAAAAA;
+    display: inline-block;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: .9375em;
+    font-weight: 400;
+    text-shadow: 1px -2px 1px #333;
+  }
+  #feed .date {
+    color: #CCC;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: .875em;
+    font-weight: 400;
+    float: right;
+    text-shadow: 1px -2px 1px #333;
+  }
+  #feed p {
+    font-size: .9375em;
+    margin-top: 15px;
+  }
+  #feed strong {
+     text-shadow: 1px -2px 1px #333;
+  }
+  .gallery {
+    overflow: hidden;
+  }
+  .gallery img {
+    border: 1px solid #CCC;
+    height: 75px;
+    width: 75px;
+  }
+  footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+  #message {
+    background: #383838;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#212121));
+    background-image: -webkit-linear-gradient(top, #383838, #212121);
+    background-image:    -moz-linear-gradient(top, #383838, #212121);
+    background-image:     -ms-linear-gradient(top, #383838, #212121);
+    background-image:      -o-linear-gradient(top, #383838, #212121);
+    background-image:         linear-gradient(to bottom, #383838, #212121);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383838', endColorstr='#212121');
+    border-top: 1px solid #343434;
+  }
+  #handle {
+    bottom: -1px;
+    background: #414040;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#414040));
+    background-image: -webkit-linear-gradient(top, #212121, #414040);
+    background-image:    -moz-linear-gradient(top, #212121, #414040);
+    background-image:     -ms-linear-gradient(top, #212121, #414040);
+    background-image:      -o-linear-gradient(top, #212121, #414040);
+    background-image:         linear-gradient(to bottom, #212121, #414040);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#212121', endColorstr='#414040');
+    border-left: 1px solid #343434;
+    border-right: 1px solid #343434;
+    border-top: 1px solid #343434;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+    font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
+    font-size: 1.125em;
+    font-weight: 400;
+    padding: 10px 10px 0;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 1px -2px 1px #333;
+    width: 200px;
+  }
+  #neck {
+    background: #414040;
+    height: 9px;
+    border-top: 1px solid #343434;
+  }
+  #trunk {
+    background: #414040;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#414040), to(#626263));
+    background-image: -webkit-linear-gradient(top, #414040, #626263);
+    background-image:    -moz-linear-gradient(top, #414040, #626263);
+    background-image:     -ms-linear-gradient(top, #414040, #626263);
+    background-image:      -o-linear-gradient(top, #414040, #626263);
+    background-image:         linear-gradient(to bottom, #414040, #626263);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#414040', endColorstr='#626263');
+    display: none;
+  }
+  #dim {
+    background: #FFF;
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    -khtml-opacity: .4;
+    -moz-opacity: .4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: none;
+  }
+
+
+/* ====================================== */
+/* ! Layout for 480px - 800px (tablets)   */
+/* ====================================== */
+
+@media handheld, only screen and (max-width: 800px) {
+
+  body {
+    font-size: .875em;
+  }
+  #responsive-layout {
+    max-width: 725px;
+    min-width: 725px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #topbar {
+    font-size: 1.111em;
+  }
+  .situation .selectBox {
+    line-height: 1.714em;
+  }
+  .roommates {
+    padding: 12px 14px;
+    text-align: left;
+    width: 40%;
+  }
+  footer {
+    font-size: 1.111em;
+  }
+
+}
+
+
+/* ============================================= */
+/* ! Layout for 460px-480px (mobile landscape)   */
+/* ============================================= */
+
+@media handheld, only screen and (max-width: 480px) {
+
+  body {
+    padding: 46px 0 10px;
+  }
+  #global-menu {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    z-index: 1;
+  }
+  nav li {
+    display: block;
+  }
+  #mobile-menu {
+    display: block;
+  }
+  #content {
+    padding: 0 10px;
+  }
+  #responsive-layout {
+    width: 100%;
+    min-width: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #sidebar {
+    display: none;
+  }
+  #mobile-only {
+    display: inline;
+  }
+  .profile-pic-container {
+    display: inline;
+    float: left;
+    margin: 0 6.4% 6px 0;
+    min-height: 1px;
+    width: 46.6%;
+  }
+  #profile {
+    display: inline;
+    float: left;
+    min-height: 1px;
+    width: 46.6%;
+  }
+  .name {
+    font-size: 2.1429em;
+    margin: 0 0 5px 0;
+  }
+  .tagline {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+  }
+  .contact-me {
+    margin: 0 0 8px 0;
+  }
+  .last-login {
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+  }
+  .situation {
+    clear: both;
+    padding-left: 30px;
+    margin: 0;
+  }
+  .situation em {
+    font-size: 1em;
+  }
+  .situation h5 {
+    padding: 8px 0 20px 20px;
+  }
+  .roommates {
+    float: left;
+    padding: 8px 14px;
+    width: 55%;
+  }
+  #main {
+    margin: 0;
+    width: 100%;
+  }
+  #main header {
+    display: none;
+  }
+  #feed {
+    border: 1px solid #CCC;
+    padding: 5px 15px 15px 15px;
+    margin-top: 10px;
+  }
+  #feed article {
+    margin-top: 10px;
+  }
+  #feed p {
+    margin-top: 10px;
+  }
+  footer {
+    display: none;
+  }
+
+}
+
+
+/* ============================================== */
+/* ! Layout for 300px - 460px (mobile portrait)   */
+/* ============================================== */
+
+@media handheld, only screen and (max-width: 460px) {
+
+  .profile-pic-container {
+    margin: 0 8.4% 6px 0;
+    width: 45.4%;
+  }
+  #profile {
+    width: 45.4%;
+  }
+  .name {
+    font-size: 1.4286em;
+    margin: 0 0 5px 0;
+  }
+  .tagline {
+    font-size: .875em;
+    margin: 0 0 10px 0;
+  }
+  .contact-me {
+    font-size: 1em;
+    margin: 0 0 8px 0;
+  }
+  .last-login {
+    margin: 0;
+    text-align: center;
+  }
+  .situation {
+    padding-left: 0;
+  }
+
+}
+
+
+/* ============================ */
+/* ! Layout for 1382px and up   */
+/* ============================ */
+
+@media only screen and (min-width: 1382px) {
+
+  body {
+    font-size: 1.1875em;
+  }
+  #responsive-layout {
+    max-width: 1160px;
+  }
+  #topbar {
+    font-size: .833em;
+  }
+  .situation .selectBox {
+    line-height: 24px;
+  }
+  .situation .list-btn {
+    font-size: 1.263em;
+  }
+  footer {
+    font-size: .833em;
+  }
+
+}
