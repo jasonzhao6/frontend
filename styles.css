@@ -1,0 +1,12 @@
+.project {
+  background: pink;
+}
+.project h2, .project em, .project b {
+  display: inline;
+}
+.project b {
+  float: right;
+}
+.project i {
+  display: block;
+}
