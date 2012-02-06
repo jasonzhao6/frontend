@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Aren't You Curious?</title>
+  <script type="text/javascript" src='jquery.min.js'></script>
+  <script type="text/javascript" src='jquery-ui.min.js'></script>
+  <script type="text/javascript" src='highcharts.min.js'></script>
+  <link href="bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+  <script type='text/javascript'>
+  //<![CDATA[
+    $(document).ready(function() {
+      $(".date_picker").datepicker({dateFormat: 'yy-mm-dd'});
+      $("#refresh-btn").click(function(e){
+        e.preventDefault();
+      });
+    });
+    
+    function strings_to_floats(strings) {
+      for(var i=strings.length; i--;) strings[i] = parseFloat(strings[i]);
+      return strings;
+    }
+    
+    $(window).load(function() {
+      var colors = Highcharts.getOptions().colors;
+      var categories = $('#variation-names').data('names').split(', ');
+      var submission_total = $('#total-submissions').data('total');
+      $('.variation-chart').each(function() {
+        var match = strings_to_floats($(this).data('match').split(', '));
+        var okcupid = strings_to_floats($(this).data('okcupid').split(', '));
+        var chemistry = strings_to_floats($(this).data('chemistry').split(', '));
+        var peoplemedia = strings_to_floats($(this).data('peoplemedia').split(', '));
+        var impression_totals = strings_to_floats($("#" + $(this).attr('id') + "_impression_totals").data('totals').split(', '));
+        new Highcharts.Chart({
+          chart: {
+            renderTo: $(this).attr('id'),
+            defaultSeriesType: 'column'
+          },
+          title: {
+            text: null
+          },
+          xAxis: {
+            categories: categories,
+            title: {
+              text: 'Variations'
+            }
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Conversion Rate (%)'
+            },
+            labels: {
+              formatter: function() {
+                return '<strong>' + parseFloat(this.value) / 100 + '</strong>';
+              }
+            }
+          },
+          tooltip: {
+            formatter: function() {
+              console.log(this);
+              return '<strong>' + this.series.name + '</strong><br><strong>' + Math.round(this.y) / 100 + '% of ' + this.x + ' population</strong><br><strong>' + Math.round(this.y / 10000 * impression_totals[this.point.x]) + ' user(s)</strong>';
+            }
+          },
+          plotOptions: {
+            column: {
+              pointPadding: 0.2,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            color: colors[0],
+            name: 'Match',
+            data: match
+    
+          },
+          {
+            color: colors[2],
+            name: 'OkCupid',
+            data: okcupid
+    
+          },
+          {
+            color: colors[3],
+            name: 'Chemistry',
+            data: chemistry
+    
+          },
+          {
+            color: colors[5],
+            name: 'PeopleMedia',
+            data: peoplemedia
+    
+          }],
+          credits: {
+            enabled: false
+          }
+        });
+      });      
+    });
+  //]]>
+</script>
+</head>
+<body>
+  <div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown" >
+      <div class="topbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle brand">AYC Analytics</a>
+              <ul class="dropdown-menu">
+                <li><a href="traffic.html">Traffic Report</a></li>
+                <li><a href="submission.html">Submission Report</a></li>
+                <li><a href="conversion.html">Conversion Report</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class='report_nav pull-right'>
+<form accept-charset="UTF-8" action="./conversion" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+Date range filter :
+<input class="date_picker" id="start" name="start" type="text" value="2012-01-06" />
+to
+<input class="date_picker" id="end" name="end" type="text" value="2012-02-06" />
+<button id='refresh-btn' class='btn success'>Refresh</button>
+</form>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+<div class='page-header'>
+<h1>
+Conversion Report
+<small>In a given timespan, how did different variations affect conversion rate?</small>
+</h1>
+</div>
+<div class='row' id='reports'>
+<section>
+<a name='91875120_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='3504, 542, 607, 574, 563, 609, 609' id='91875120_impression_totals'></div>
+<div class='offset1'>
+<h3>Overall</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='4.0, 3.0, 7.0, 5.0, 8.0, 2.0, 1.0' data-match='8.560744863013698, 12.0, 16.47, 6.0, 23.0, 16.42, 16.42' data-okcupid='5.0, 7.0, 3.0, 12.0, 4.0, 8.0, 9.0' data-peoplemedia='8.561489726027396, 18.45, 15.0, 15.0, 28.0, 22.0, 32.84' id='91875120'></div>
+</div>
+</section>
+<section>
+<a name='91875320_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='2239, 326, 378, 371, 375, 400, 389' id='91875320_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='8.93309066547566, 0.0, 0.0, 0.0, 0.0, 25.0, 25.71' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='13.397458686913799, 30.67, 0.0, 0.0, 0.0, 0.0, 51.41' id='91875320'></div>
+</div>
+</section>
+<section>
+<a name='91875300_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='523, 91, 96, 93, 80, 95, 68' id='91875300_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='19.121070745697896, 0.0, 104.17, 0.0, 0.0, 0.0, 0.0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' id='91875300'></div>
+</div>
+</section>
+<section>
+<a name='91875280_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='111, 13, 23, 10, 21, 25, 19' id='91875280_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' id='91875280'></div>
+</div>
+</section>
+<section>
+<a name='91875260_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='11, 1, 1, 1, 5, 3, 0' id='91875260_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0' data-match='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0' id='91875260'></div>
+</div>
+</section>
+<section>
+<a name='91875220_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='315, 63, 51, 45, 43, 48, 65' id='91875220_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' id='91875220'></div>
+</div>
+</section>
+<section>
+<a name='91875200_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='46, 9, 15, 7, 4, 4, 7' id='91875200_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' id='91875200'></div>
+</div>
+</section>
+<section>
+<a name='91875180_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='21, 1, 4, 4, 8, 2, 2' id='91875180_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-match='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-okcupid='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' data-peoplemedia='0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0' id='91875180'></div>
+</div>
+</section>
+<section>
+<a name='91875160_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='6, 0, 0, 1, 0, 0, 5' id='91875160_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-chemistry='0.0, 0, 0, 0.0, 0, 0, 0.0' data-match='0.0, 0, 0, 0.0, 0, 0, 0.0' data-okcupid='0.0, 0, 0, 0.0, 0, 0, 0.0' data-peoplemedia='0.0, 0, 0, 0.0, 0, 0, 0.0' id='91875160'></div>
+</div>
+</section>
+<div class='hide' data-names='total, v1, v2, v3, v4, v5, v6' id='variation-names'></div>
+</div>
+<div id='pagination-gradient'></div>
+<div id='pagination'>
+<div class='pagination'>
+<ul>
+<li class='next disabled'>
+<a href='#'>Demographics:</a>
+</li>
+<li>
+<a href='#91875120_chart'>Overall</a>
+</li>
+<li>
+<a href='#91875320_chart'>Men 46-200</a>
+</li>
+<li>
+<a href='#91875300_chart'>Men 36-45</a>
+</li>
+<li>
+<a href='#91875280_chart'>Men 26-35</a>
+</li>
+<li>
+<a href='#91875260_chart'>Men 18-25</a>
+</li>
+<li>
+<a href='#91875220_chart'>Women 46-200</a>
+</li>
+<li>
+<a href='#91875200_chart'>Women 36-45</a>
+</li>
+<li>
+<a href='#91875180_chart'>Women 26-35</a>
+</li>
+<li>
+<a href='#91875160_chart'>Women 18-25</a>
+</li>
+</ul>
+</div>
+</div>
+
+
+</div>

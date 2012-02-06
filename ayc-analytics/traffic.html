@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Aren't You Curious?</title>
+  <script type="text/javascript" src='jquery.min.js'></script>
+  <script type="text/javascript" src='jquery-ui.min.js'></script>
+  <script type="text/javascript" src='highcharts.min.js'></script>
+  <link href="bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+  <script type='text/javascript'>
+  //<![CDATA[
+    $(document).ready(function() {
+      $(".date_picker").datepicker({dateFormat: 'yy-mm-dd'});
+      $("#refresh-btn").click(function(e){
+        e.preventDefault();
+      });
+    });
+    
+    function strings_to_integers(strings) {
+      for(var i=strings.length; i--;) strings[i] = parseInt(strings[i]);
+      return strings;
+    }
+    
+    function parse_pairs(pairs) {
+      for(var i=pairs.length; i--;) pairs[i] = strings_to_integers(pairs[i].split('-'));
+      return pairs;
+    }
+    
+    $(window).load(function() {
+      $('.variation-chart').each(function() {
+        var primary = parse_pairs($(this).data('primary').split(', '));
+        new Highcharts.Chart({
+          chart: {
+            renderTo: $(this).attr('id'),
+            defaultSeriesType: 'spline'
+          },
+          title: {
+            text: null
+          },
+          xAxis: {
+            title: {
+              text: 'Date'
+            },
+            type: 'datetime',
+            dateTimeLabelFormats: {
+            	second: '%b %e',
+            	minute: '%b %e',
+            	hour: '%b %e',
+            	day: '%b %e',
+            	week: '%b %e',
+            	month: '%b \'%y',
+            	year: '%Y'
+            }
+          },
+          yAxis: {
+            title: {
+              text: 'Number of Impressions'
+            },
+            min: 0
+          },
+          tooltip: {
+            formatter: function() {
+              return '<strong>' + Highcharts.dateFormat('%b %e', this.x) + '</strong>';
+            }
+          },
+          plotOptions: {
+            spline: {
+              dataLabels: {
+                enabled: true
+              }
+            }
+          },
+          series: [{
+            name: 'Selected Period',
+            data: primary
+          }],
+          legend: {
+            enabled: false
+          },
+          credits: {
+            enabled: false
+          }
+        });
+      });
+    });
+  //]]>
+</script>
+</head>
+<body>
+  <div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown" >
+      <div class="topbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle brand">AYC Analytics</a>
+              <ul class="dropdown-menu">
+                <li><a href="traffic.html">Traffic Report</a></li>
+                <li><a href="submission.html">Submission Report</a></li>
+                <li><a href="conversion.html">Conversion Report</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class='report_nav pull-right'>
+<form accept-charset="UTF-8" action="./traffic" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+Date range filter :
+<input class="date_picker" id="start" name="start" type="text" value="2012-01-06" />
+to
+<input class="date_picker" id="end" name="end" type="text" value="2012-02-06" />
+<button id='refresh-btn' class='btn success'>Refresh</button>
+</form>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+<div class='page-header'>
+<h1>
+Traffic Report
+<small>In a given timespan, how many people visited our website?</small>
+</h1>
+</div>
+<div class='row' id='reports'>
+<section>
+<a name='285831260_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Overall</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1325808000000-174, 1325894400000-340, 1325980800000-704, 1326067200000-691, 1326153600000-314, 1326240000000-46, 1326326400000-30, 1326412800000-26, 1326499200000-32, 1326585600000-26, 1326672000000-24, 1326758400000-22, 1326844800000-27, 1326931200000-14, 1327017600000-17, 1327104000000-15, 1327190400000-28, 1327276800000-25, 1327363200000-12, 1327449600000-24, 1327536000000-16, 1327622400000-23, 1327708800000-15, 1327795200000-16, 1327881600000-23, 1327968000000-21, 1328054400000-22, 1328140800000-106, 1328227200000-121, 1328313600000-132, 1328400000000-136, 1328486400000-1' id='285831260'></div>
+</div>
+</section>
+<section>
+<a name='285831460_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Men 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1325808000000-96, 1325894400000-246, 1325980800000-554, 1326067200000-564, 1326153600000-258, 1326240000000-33, 1326326400000-17, 1326412800000-26, 1326499200000-29, 1326585600000-16, 1326672000000-11, 1326758400000-15, 1326844800000-17, 1326931200000-12, 1327017600000-17, 1327104000000-13, 1327190400000-26, 1327276800000-21, 1327363200000-9, 1327449600000-20, 1327536000000-3, 1327622400000-12, 1327708800000-12, 1327795200000-11, 1327881600000-8, 1327968000000-13, 1328054400000-10, 1328140800000-5, 1328227200000-13, 1328313600000-16, 1328400000000-14' id='285831460'></div>
+</div>
+</section>
+<section>
+<a name='285831440_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Men 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1325808000000-45, 1325894400000-59, 1325980800000-99, 1326067200000-81, 1326153600000-35, 1326240000000-11, 1326326400000-11, 1326499200000-2, 1326585600000-6, 1326672000000-5, 1326758400000-4, 1326844800000-1, 1326931200000-1, 1327190400000-2, 1327363200000-1, 1327449600000-2, 1327536000000-8, 1327622400000-1, 1327708800000-2, 1327881600000-7, 1327968000000-5, 1328054400000-2, 1328140800000-1, 1328227200000-1, 1328313600000-1, 1328400000000-2' id='285831440'></div>
+</div>
+</section>
+<section>
+<a name='285831420_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Men 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1325808000000-14, 1325894400000-7, 1325980800000-10, 1326067200000-3, 1326153600000-5, 1326240000000-1, 1326585600000-1, 1326672000000-7, 1326758400000-2, 1326844800000-2, 1327104000000-2, 1327276800000-1, 1327363200000-1, 1327622400000-2, 1327795200000-1, 1327881600000-4, 1327968000000-3, 1328140800000-5, 1328227200000-2' id='285831420'></div>
+</div>
+</section>
+<section>
+<a name='285831400_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Men 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1325894400000-1, 1325980800000-1, 1326585600000-3, 1326844800000-3, 1327708800000-1, 1328227200000-1, 1328313600000-1' id='285831400'></div>
+</div>
+</section>
+<section>
+<a name='285831360_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Women 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1326067200000-1, 1326844800000-1, 1327622400000-1, 1328054400000-6, 1328140800000-49, 1328227200000-81, 1328313600000-91, 1328400000000-101, 1328486400000-1' id='285831360'></div>
+</div>
+</section>
+<section>
+<a name='285831340_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Women 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1327622400000-5, 1328140800000-30, 1328227200000-4, 1328313600000-5, 1328400000000-4' id='285831340'></div>
+</div>
+</section>
+<section>
+<a name='285831320_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Women 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1326326400000-1, 1326844800000-1, 1327449600000-2, 1328140800000-10, 1328227200000-6, 1328400000000-1' id='285831320'></div>
+</div>
+</section>
+<section>
+<a name='285831300_chart'></a>
+<div class='anchor-offset'></div>
+<div class='offset1'>
+<h3>Women 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-primary='1327881600000-1, 1328313600000-5' id='285831300'></div>
+</div>
+</section>
+</div>
+<div id='pagination-gradient'></div>
+<div id='pagination'>
+<div class='pagination'>
+<ul>
+<li class='next disabled'>
+<a href='#'>Demographics:</a>
+</li>
+<li>
+<a href='#285831260_chart'>Overall</a>
+</li>
+<li>
+<a href='#285831460_chart'>Men 46-200</a>
+</li>
+<li>
+<a href='#285831440_chart'>Men 36-45</a>
+</li>
+<li>
+<a href='#285831420_chart'>Men 26-35</a>
+</li>
+<li>
+<a href='#285831400_chart'>Men 18-25</a>
+</li>
+<li>
+<a href='#285831360_chart'>Women 46-200</a>
+</li>
+<li>
+<a href='#285831340_chart'>Women 36-45</a>
+</li>
+<li>
+<a href='#285831320_chart'>Women 26-35</a>
+</li>
+<li>
+<a href='#285831300_chart'>Women 18-25</a>
+</li>
+</ul>
+</div>
+</div>
+
+
+</div>

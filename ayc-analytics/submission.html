@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Aren't You Curious?</title>
+  <script type="text/javascript" src='jquery.min.js'></script>
+  <script type="text/javascript" src='jquery-ui.min.js'></script>
+  <script type="text/javascript" src='highcharts.min.js'></script>
+  <link href="bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+  <script type='text/javascript'>
+  //<![CDATA[
+    $(document).ready(function() {
+      $(".date_picker").datepicker({dateFormat: 'yy-mm-dd'});
+      $("#refresh-btn").click(function(e){
+        e.preventDefault();
+      });
+    });
+    
+    function strings_to_floats(strings) {
+      for(var i=strings.length; i--;) strings[i] = parseFloat(strings[i]);
+      return strings;
+    }
+    
+    $(window).load(function() {
+      var colors = Highcharts.getOptions().colors;
+      var categories = $('#variation-names').data('names').split(', ');
+      var submission_total = $('#total-submissions').data('total');
+      $('.variation-chart').each(function() {
+        var successful = strings_to_floats($(this).data('successful').split(', '));
+        var unsuccessful = strings_to_floats($(this).data('unsuccessful').split(', '));
+        var impression_totals = strings_to_floats($("#" + $(this).attr('id') + "_impression_totals").data('totals').split(', '));
+        new Highcharts.Chart({
+          chart: {
+            renderTo: $(this).attr('id'),
+            defaultSeriesType: 'column'
+          },
+          title: {
+            text: null
+          },
+          xAxis: {
+            categories: categories,
+            title: {
+              text: 'Variations'
+            }
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Submission Rate (%)'
+            },
+            stackLabels: {
+              enabled: true,
+              style: {
+                fontWeight: 'bold',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+              },
+              formatter: function() {
+                return Math.round(this.total*100)/100 + '%';
+              }
+            }
+          },
+          legend: {
+            reversed: true
+          },
+          tooltip: {
+            formatter: function() {
+            return '<strong>' + this.series.name + '</strong><br><strong>' + Math.round(this.y) + '% of ' + this.x + ' population</strong><br><strong>' + Math.round(this.y / 100 * impression_totals[this.point.x]) + ' user(s)</strong>';
+            }
+          },
+          plotOptions: {
+            column: {
+              stacking: 'normal',
+              dataLabels: {
+                enabled: false
+              }
+            }
+          },
+          series: [{
+            color: colors[8],
+            name: 'unsuccessful submission attempts',
+            data: unsuccessful
+          },
+          {
+            color: colors[2],
+            name: 'successful submission attempts',
+            data: successful
+          }],
+          credits: {
+            enabled: false
+          }
+        });
+      });
+    });
+  //]]>
+</script>
+</head>
+<body>
+  <div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown" >
+      <div class="topbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle brand">AYC Analytics</a>
+              <ul class="dropdown-menu">
+                <li><a href="traffic.html">Traffic Report</a></li>
+                <li><a href="submission.html">Submission Report</a></li>
+                <li><a href="conversion.html">Conversion Report</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class='report_nav pull-right'>
+<form accept-charset="UTF-8" action="./submission" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+Date range filter :
+<input class="date_picker" id="start" name="start" type="text" value="2012-01-06" />
+to
+<input class="date_picker" id="end" name="end" type="text" value="2012-02-06" />
+<button id='refresh-btn' class='btn success'>Refresh</button>
+</form>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+<div class='page-header'>
+<h1>
+Submission Report
+<small>In a given timespan, how did different variations affect submission rate?</small>
+</h1>
+</div>
+<div class='row' id='reports'>
+<section>
+<a name='290312720_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='3223, 494, 550, 522, 516, 565, 576' id='290312720_impression_totals'></div>
+<div class='offset1'>
+<h3>Overall</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='22.929851070431273, 25.91, 20.91, 25.29, 20.74, 22.65, 22.4' data-unsuccessful='5.491511014582688, 4.449999999999999, 5.09, 7.090000000000003, 7.550000000000001, 4.080000000000002, 4.860000000000003' id='290312720'></div>
+</div>
+</section>
+<section>
+<a name='290312940_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='2117, 309, 362, 341, 350, 380, 375' id='290312940_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='22.39105810108644, 26.21, 19.06, 25.81, 19.14, 22.11, 22.67' data-unsuccessful='4.672928672649977, 4.210000000000001, 5.800000000000001, 4.100000000000001, 6.57, 3.150000000000002, 4.259999999999998' id='290312940'></div>
+</div>
+</section>
+<section>
+<a name='290312920_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='395, 72, 64, 68, 61, 76, 54' id='290312920_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='36.203417721518996, 40.28, 37.5, 36.76, 29.51, 28.95, 46.3' data-unsuccessful='-1.7715949367088601, -5.560000000000002, -1.5600000000000023, 2.950000000000003, 0.0, -2.629999999999999, -3.7099999999999937' id='290312920'></div>
+</div>
+</section>
+<section>
+<a name='290312900_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='73, 5, 14, 8, 16, 20, 10' id='290312900_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='32.87671232876713, 80.0, 50.0, 25.0, 25.0, 15.0, 40.0' data-unsuccessful='-4.11041095890411, -20.0, -14.29, 12.5, 0.0, 0.0, -10.0' id='290312900'></div>
+</div>
+</section>
+<section>
+<a name='290312880_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='11, 1, 1, 1, 5, 3, 0' id='290312880_impression_totals'></div>
+<div class='offset1'>
+<h3>Men 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='9.090909090909092, 0.0, 0.0, 0.0, 20.0, 0.0, 0' data-unsuccessful='9.090909090909092, 100.0, 0.0, 0.0, 0.0, 0.0, 0' id='290312880'></div>
+</div>
+</section>
+<section>
+<a name='290312820_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='332, 66, 50, 49, 45, 51, 71' id='290312820_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 46-200</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='11.145813253012047, 7.58, 14.0, 14.29, 11.11, 9.8, 11.27' data-unsuccessful='19.276475903614458, 18.18, 14.0, 28.57, 26.67, 17.65, 14.080000000000002' id='290312820'></div>
+</div>
+</section>
+<section>
+<a name='290312800_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='48, 9, 15, 7, 5, 4, 8' id='290312800_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 36-45</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='20.832708333333333, 33.33, 20.0, 0.0, 20.0, 50.0, 12.5' data-unsuccessful='10.418333333333335, 0.0, 6.670000000000002, 14.29, 20.0, 25.0, 12.5' id='290312800'></div>
+</div>
+</section>
+<section>
+<a name='290312780_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='21, 1, 4, 4, 8, 2, 2' id='290312780_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 26-35</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='19.047619047619047, 0.0, 25.0, 25.0, 25.0, 0.0, 0.0' data-unsuccessful='14.285714285714286, 0.0, 25.0, 25.0, 0.0, 50.0, 0.0' id='290312780'></div>
+</div>
+</section>
+<section>
+<a name='290312760_chart'></a>
+<div class='anchor-offset'></div>
+<div class='hide' data-totals='6, 0, 0, 1, 0, 0, 5' id='290312760_impression_totals'></div>
+<div class='offset1'>
+<h3>Women 18-25</h3>
+</div>
+<div class='offset1 chart-container'>
+<div class='variation-chart' data-successful='0.0, 0, 0, 0.0, 0, 0, 0.0' data-unsuccessful='33.333333333333336, 0, 0, 100.0, 0, 0, 20.0' id='290312760'></div>
+</div>
+</section>
+<div class='hide' data-names='total, v1, v2, v3, v4, v5, v6' id='variation-names'></div>
+</div>
+<div id='pagination-gradient'></div>
+<div id='pagination'>
+<div class='pagination'>
+<ul>
+<li class='next disabled'>
+<a href='#'>Demographics:</a>
+</li>
+<li>
+<a href='#290312720_chart'>Overall</a>
+</li>
+<li>
+<a href='#290312940_chart'>Men 46-200</a>
+</li>
+<li>
+<a href='#290312920_chart'>Men 36-45</a>
+</li>
+<li>
+<a href='#290312900_chart'>Men 26-35</a>
+</li>
+<li>
+<a href='#290312880_chart'>Men 18-25</a>
+</li>
+<li>
+<a href='#290312820_chart'>Women 46-200</a>
+</li>
+<li>
+<a href='#290312800_chart'>Women 36-45</a>
+</li>
+<li>
+<a href='#290312780_chart'>Women 26-35</a>
+</li>
+<li>
+<a href='#290312760_chart'>Women 18-25</a>
+</li>
+</ul>
+</div>
+</div>
+
+
+</div>
