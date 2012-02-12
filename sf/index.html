@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <meta charset='utf-8'>
+    <link href="assets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/events.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="assets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="gr1JSJA2jzOKpiSesAY8B/wRnHeIq59TBoBtA8jAtZw=" name="csrf-token" />
+  </head>
+  <body>
+    <div class='topbar' id='topbar'>
+      <div class='topbar-inner'>
+        <div class='container'>
+          <a class='brand' href='#'>San Francisco</a>
+          <ul class='nav' data-scrollspy='scrollspy'>
+            <li class='active'>
+              <a href='#this-week'>
+                This Week
+                <small>(23)</small>
+              </a>
+            </li>
+            <li>
+              <a href='#next-week'>
+                Next Week
+                <small>(35)</small>
+              </a>
+            </li>
+            <li>
+              <a href='#two-weeks-away'>
+                Two Weeks Away
+                <small>(18)</small>
+              </a>
+            </li>
+            <li>
+              <a href='#one-month-away'>
+                One Month Away
+                <small>(5)</small>
+              </a>
+            </li>
+            <li>
+              <a href='#far-far-away'>
+                Far Far Away
+                <small>(21)</small>
+              </a>
+            </li>
+          </ul>
+          <ul class='nav secondary-nav'>
+            <li>
+              <a>Saved(0)</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <div class='well' id='side-bar'>
+        <div class='page-header'>
+          <h3>Filters</h3>
+        </div>
+        <div class='filters' id='time-of-the-day'>
+          <a class='btn' href='#'>Morning</a>
+          <a class='btn' href='#'>Afternoon</a>
+          <a class='btn info' href='#'>Night</a>
+        </div>
+        <div class='filters' id='days-of-the-week'>
+          <a class='btn info' href='#'>Sun</a>
+          <a class='btn' href='#'>Mon</a>
+          <a class='btn' href='#'>Tue</a>
+          <a class='btn' href='#'>Wed</a>
+          <a class='btn' href='#'>Thu</a>
+          <a class='btn info' href='#'>Fri</a>
+          <a class='btn info' href='#'>Sat</a>
+        </div>
+        <div class='filters' id='filter-shortcuts'>
+          <a href='#'>Weekdays</a>
+          |
+          <a href='#'>Weekends</a>
+          |
+          <a href='#'>Clear</a>
+        </div>
+        <div class='page-header'>
+          <h3>Tags</h3>
+        </div>
+        <div id='tag-cloud'>
+          <a class='btn' href='#'>Cheap</a>
+          <a class='btn' href='#'>Couples</a>
+          <a class='btn' href='#'>Date Ideas</a>
+          <a class='btn' href='#'>Family Friendly</a>
+          <a class='btn' href='#'>Fun</a>
+          <a class='btn' href='#'>Seniors</a>
+          <a class='btn' href='#'>Chill</a>
+          <a class='btn' href='#'>Culture</a>
+        </div>
+      </div>
+      <div id='cards-layout'>
+        <section id='this-week'>
+          <div class='cards-header page-header'>
+            <h1>
+              This Week
+              <small>(23 events)</small>
+            </h1>
+          </div>
+          <div class='cards'>
+            <div class='card alert-message' data-content='Take the ferry to Angel Island for arts &amp; crafts and make your own holiday ornament to take home! Enjoy the smell and taste of hot apple cider and freshly baked cookies made in the historic brick o...' title='Sat 11/12 - 11a'>
+              <p>Victorian Christmas <strong>Festival</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Celebrate the 10th Anniversary of the Chinese Historical Society of America Museum with a lineup of visual art, dance, performance and music on Saturday, November 12th.&#x000A;&#x000A;All artists, performers, &amp; ...' title='Sat 11/12 - 11a'>
+              <p>SF Chinatown <strong>Museum</strong> 10th Anniversary</p>
+            </div>
+            <div class='card alert-message' data-content='Join Left Bank San Jose chef David Bastide (pictured) and One Market Restaurant’s Patti Dellamonica-Bauler for cooking demonstrations featuring the seasonal bounty of the Ferry Plaza Farmers Market...' title='Sat 11/12 - 11a'>
+              <p>Cooking Demos with <strong>Free</strong> Samples</p>
+            </div>
+            <div class='card alert-message' data-content='From farro to fennel, sample it all at the CUESA Kitchen’s seasonal cooking demo on Saturday, November 12, where Chef David Bastide of Left Bank San Jose and Chef Patti Dellamonica of One Market Re...' title='Sat 11/12 - 11a'>
+              <p>Farmers’ <strong>Market</strong> Cooking Demo</p>
+            </div>
+            <div class='card alert-message' data-content='Enjoy everything from kefir to crats at the 30th annual Armenian Food Fair &amp; Festival at the Calvary Armenian Congregational Church, which will feature homemade delicacies for sale, traditional Arm...' title='Sat 11/12 - 0p'>
+              <p>30th Annual Armenian Food Fair & <strong>Festival</strong></p>
+            </div>
+            <div class='card alert-message' data-content='You’ve probably started feeling the sharper chill in the air. The days, of course, are getting shorter. And out at Alemany Farm folks are turning over the garden and getting ready for the rainy sea...' title='Sat 11/12 - 0p'>
+              <p>Alemany Farm Work Day</p>
+            </div>
+            <div class='card alert-message' data-content='The 2011 SF International South Asian Film Festival (November 9-12) will present 16 programs featuring films from India, Pakistan, Nepal, South Africa, Sri Lanka,Tibet, and the US featuring a full ...' title='Sat 11/12 - 0p'>
+              <p>9th Annual SF International South Asian <strong>Film</strong> <strong>Festival</strong></p>
+            </div>
+            <div class='card alert-message' data-content='San Francisco design company GAMA-GO has one sale a year – and this is it. Save up to 75% on locally designed kitchen gadgets, bar accessories,  men’s &amp; women’s clothing and tons of other unique ac...' title='Sat 11/12 - 0p'>
+              <p>GAMAGO’s 8th Annual Holiday <strong>Sale</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Create a collective sculpture with scrap wood, cordless drills and dowels, and even take a piece of it home with you (after it’s photographed, of course) at this month’s Make It at MOCFA workshop w...' title='Sat 11/12 - 2p'>
+              <p>Collective Sculpture Workshop</p>
+            </div>
+            <div class='card alert-message' data-content='Elevation Pilates hosts an open house on Saturday November 12th from  2pm – 6pm with some “healing” classes (that we can vouch for) but if you’re looking for free pilates or need to get your brows ...' title='Sat 11/12 - 2p'>
+              <p><strong>Free</strong> Brow Wax & Pilates Day</p>
+            </div>
+            <div class='card alert-message' data-content='Iron Chef winner and owner and head chef at Aziza (critics call it “by far the best Moroccan restaurant in the city”), Mourad Lahlou celebrates the publication of his cookbook, Mourad: New Moroccan...' title='Sat 11/12 - 3p'>
+              <p>Aziza Chef Book Event</p>
+            </div>
+            <div class='card alert-message' data-content='Now reopened at its new location in downtown San Francisco, the Varnish Fine Art gallery celebrates its re-launch an exhibit of three-dimensional artwork by 20 artists called Relaunch Part II - a g...' title='Sat 11/12 - 4p'>
+              <p>Group Exhibition of 20 Sculptors</p>
+            </div>
+            <div class='card alert-message' data-content='The Electronic Music Fans meetup takes place November 12th at Project One – a DJ lounge in the Design District of San Francisco – The lounge at project one is a 2000 sq feet converted San Francisco...' title='Sat 11/12 - 4p'>
+              <p>Electronic <strong>Music</strong> Mash Up Day</p>
+            </div>
+            <div class='card alert-message' data-content='Yoshi’s Jazz Club SF celebrates Bay Area talent with a series of free concerts in their lounge. From straight jazz to multimedia sampling, and from Bossa Nova to African jazz, this series highlight...' title='Sat 11/12 - 6p'>
+              <p>Yoshi’s <strong>Free</strong> Jazz Night</p>
+            </div>
+            <div class='card alert-message' data-content='…Bike Culture Enthusiasts, Music Aficionados, &amp; Folks who want to have a good time…&#x000A;&#x000A;In celebration of the opening day ib the 4th Annual 2011 SF Bike Expo, the Official SF Bike Expo After Party kic...' title='Sat 11/12 - 7p'>
+              <p>SF <strong>Bike</strong> Expo Official After <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='SALTED Sessions return to Mighty with music by house DJ/producers Julius Papp and Miguel Migs plus special guest Fred Everything.&#x000A;&#x000A;Started back in 2004 by Miggs, Salted was formed as a creative out...' title='Sat 11/12 - 10p'>
+              <p><strong>Free</strong> House DJ <strong>Party</strong> “Salted Sessions” at Mighty</p>
+            </div>
+            <div class='card alert-message' data-content='Every good San Franciscan has a soft spot for Ike’s Place. Now here’s a chance to enjoy it all over again! Come celebrate four years of sandwich success as Ike’s extends a special thank you to thei...' title='Sun 11/13 - 0a'>
+              <p><strong>Free</strong> Ike’s Sandwich Deal</p>
+            </div>
+            <div class='card alert-message' data-content='Green Festival, the nation’s largest green living event celebrates its 10 year milestone in San Francisco November 12-13.&#x000A;&#x000A;Annual two-day festival at the Concourse Exhibition Center in SF with 7 st...' title='Sun 11/13 - 10a'>
+              <p>10th Annual Green <strong>Festival</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Check out KUSF.org’s Rock n’ Swap Record Fair on Sunday, November 13, and score hard-to-find vinyls, posters, books, magazines and more at one of California’s largest record fairs.' title='Sun 11/13 - 10a'>
+              <p>KUSF.org <strong>Rock</strong> n’ Swap Record Fair</p>
+            </div>
+            <div class='card alert-message' data-content='Bring a note book, a good pair of walking shoes and lots of questions to Friends of the Urban Forest’s free two-hour tree tour around Bernal Heights, and learn about everything from acacias to oaks...' title='Sun 11/13 - 10a'>
+              <p><strong>Free</strong> Walking Tree <strong>Tour</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Try out some tempeh or tofu at the Imani Center’s free vegetarian brown bag lunches, held every 2nd and 4th Sunday of the month, and enjoy their November menu of sandwiches, fresh fruit, danishes, ...' title='Sun 11/13 - 10a'>
+              <p><strong>Free</strong> Vegetarian Sandwich Lunch</p>
+            </div>
+            <div class='card alert-message' data-content='Chocolate lovers,en garde! Chocolate aficionados, fanatics, lovers and addicts can taste &amp; experience the finest in artisan, gourmet &amp; premium chocolate in one of the world’s great culinary regions...' title='Sun 11/13 - 10a'>
+              <p>2011 <strong>Fall</strong> Chocolate Salon</p>
+            </div>
+            <div class='card alert-message' data-content='Present your San Francisco Public Library Card for free entry to the Contemporary Jewish Museum!&#x000A;&#x000A;In addition to the current exhibitions including Houdini: Art and Magic, enjoy a full day of magica...' title='Sun 11/13 - 11a'>
+              <p><strong>Free</strong> Day at Contemporary Jewish <strong>Museum</strong></p>
+            </div>
+          </div>
+        </section>
+        <section id='next-week'>
+          <div class='cards-header page-header'>
+            <h1>
+              Next Week
+              <small>(35 events)</small>
+            </h1>
+          </div>
+          <div class='cards'>
+            <div class='card alert-message' data-content='Join Kara Lind of Kara’s Cupcakes for a cooking demonstrations featuring the seasonal bounty of the Ferry Plaza Farmers Market.&#x000A;&#x000A;This free to the public event takes place in the CUESA kitchen under...' title='Sat 11/19 - 11a'>
+              <p>Cooking Demo with <strong>Free</strong> Samples</p>
+            </div>
+            <div class='card alert-message' data-content='Satisfy your sweet tooth with samples from Chef Kara Lind of Kara’s Cupcakes at the CUESA Kitchen’s seasonal cooking demo on Saturday, November 19, where she’ll use fresh produce from the Ferry Pla...' title='Sat 11/19 - 11a'>
+              <p>Kara’s Cupcake <strong>FREE</strong> Cooking Class</p>
+            </div>
+            <div class='card alert-message' data-content='Come have fun, play games, and eat at the Jose Ortega Elementary 2011 Harvest Festival. There will be $1 carnival games and prizes, live music, a talent show, and bring cash for the tasty El Tonaye...' title='Sat 11/19 - 11a'>
+              <p>2011 Harvest <strong>Festival</strong></p>
+            </div>
+            <div class='card alert-message' data-content='It’s stories from the past, panels and photographs at the Bayview Neighborhood History Day this Saturday, November 19, where you can check out the Black Cuisine Festival, listen to an interview wit...' title='Sat 11/19 - 11a'>
+              <p>Neighborhood History Day</p>
+            </div>
+            <div class='card alert-message' data-content='Join Chef Florence Mendoza for another installment of her hands-on vegetarian cooking series on Saturday, November 19 at the SoMa Gene Friend Park &amp; Recreation Center.&#x000A;&#x000A;This lesson will focus on de...' title='Sat 11/19 - 0p'>
+              <p>Paella</p>
+            </div>
+            <div class='card alert-message' data-content='Join Wix.com for a Pre-Thanksgiving party at the Wix Lounge featuring a free home-cooked Thanksgiving meal, Thanksgiving crafts, and games for kids. Children and families welcome.&#x000A;&#x000A;Free with RSVP.' title='Sat 11/19 - 0p'>
+              <p><strong>Free</strong> Thanksgiving Meal with Wix</p>
+            </div>
+            <div class='card alert-message' data-content='New Taste Marketplace is turning 1 and is inviting you to enjoy a Saturday afternoon of eating, learning, and shopping – all for a good cause.&#x000A;&#x000A;In addition to the wonderful food, New Taste Marketpl...' title='Sat 11/19 - 0p'>
+              <p>Artisan <strong>Market</strong> & Truffle Making Workshop</p>
+            </div>
+            <div class='card alert-message' data-content='A mammoth weekend at the historic Castro Theater chronicling the adventures of J. K. Rowling’s adolescent wizard Harry Potter and his best friends Ron Weasley and Hermione Granger. See these studen...' title='Sat 11/19 - 0p'>
+              <p>Day One</p>
+            </div>
+            <div class='card alert-message' data-content='Iron Chef winner and owner and head chef at Aziza (critics call it “by far the best Moroccan restaurant in the city”), Mourad Lahlou celebrates the publication of his cookbook, Mourad: New Moroccan...' title='Sat 11/19 - 1p'>
+              <p>Aziza Chef Book Event & <strong>Free</strong> Tasting</p>
+            </div>
+            <div class='card alert-message' data-content='Complementing the Hyatt Regency of San Francisco’s 2011 holiday tree lighting (which takes place on November 18th), snow will fall three times a day in the hotel’s lobby, from November 19th through...' title='Sat 11/19 - 1p'>
+              <p>Downtown Snow <strong>Fall</strong> 2011</p>
+            </div>
+            <div class='card alert-message' data-content='The Blank Tapes is the monicker of multi-instrumentalist singer-songwriter Matt Adams. When not recording, Matt grabs his friends and goes out on the road to play live, touring everywhere from Sout...' title='Sat 11/19 - 2p'>
+              <p>The Blank Tapes</p>
+            </div>
+            <div class='card alert-message' data-content='Bread in Italy is rough country loaves with thick chewy crusts and flat  disks of focaccia seasoned with the wild herbs of the fields.&#x000A;&#x000A;It is  celebratory sweet holiday breads dense with fat raisin...' title='Sat 11/19 - 3p'>
+              <p>The Italian Baker (Revised) Book Event</p>
+            </div>
+            <div class='card alert-message' data-content='Yoshi’s Jazz Club SF celebrates Bay Area talent with a series of free concerts in their lounge. From straight jazz to multimedia sampling, and from Bossa Nova to African jazz, this series highlight...' title='Sat 11/19 - 6p'>
+              <p>Yoshi’s <strong>Free</strong> Swing Jazz Night</p>
+            </div>
+            <div class='card alert-message' data-content='It doesn’t get much better than chocolate and coffee – especially when it’s free. Come to Photobooth on from 6pm until 9pm on November 19th for a free organic tasting of Spin City’s organic single-...' title='Sat 11/19 - 6p'>
+              <p><strong>Free</strong> Organic Chocolate & Coffee Tasting</p>
+            </div>
+            <div class='card alert-message' data-content='50 years of artworks by the multifaceted Liz Mamorsky.&#x000A;&#x000A;Come celebrate with Liz and view her works from 1961-2011, Sat, Nov 19, 6:00 pm-9:00 pm. Uvaggio Wines will be served.' title='Sat 11/19 - 6p'>
+              <p>50 Years of Liz Mamorsky’s <strong>Art</strong> & <strong>Free</strong> <strong>Wine</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Experience the driving rythms of chanteys and the beauty of seafaring ballads from the wooden decks of the historic sailing ship Balclutha during the 23rd Annual Sea Music Concert Series.&#x000A;&#x000A;Win tick...' title='Sat 11/19 - 8p'>
+              <p>23rd Annual Sea <strong>Music</strong> Concert Series</p>
+            </div>
+            <div class='card alert-message' data-content='Twenty years to the day of the release of U2′s ‘Achtung Baby – Zoo Station is playing tribute to one of the greatest albums of the ’90s. Fly shades, leather pants, TVs, Mysterious Ways, One and mor...' title='Sat 11/19 - 8p'>
+              <p>U2 “Achtung Baby” 20th Anniversary Tribute Night</p>
+            </div>
+            <div class='card alert-message' data-content='IAMSOUND Records returns with another round of free shows in the swanky Velvet Room and Redwood Room of San Francisco’s Clift Hotel this Fall.&#x000A;&#x000A;November 19th: Blood Orange&#x000A;Blood Orange is a 4-piece...' title='Sat 11/19 - 9p'>
+              <p>Blood Orange</p>
+            </div>
+            <div class='card alert-message' data-content='“Get Yucked Up” at this free comedy show featuring local comedians Brendan Lynch, Mean Dave and more at the Dirty Trix Saloon this Saturday, November 19.' title='Sat 11/19 - 9p'>
+              <p>Get Yucked Up <strong>Comedy</strong> <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='It’s the death of a disco dancer with Milk Bar’s “The Queen is Dead” dance party featuring the music of the Smiths, Morrissey and other brit pop, new wave and post punk heavy-hitters.&#x000A;&#x000A;Just RSVP in...' title='Sat 11/19 - 9p'>
+              <p>The Queen is Dead <strong>Dance</strong> <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Come out to Public Works on Saturday, November 19th to catch a free dance party with DJ Blick in the OddJob Loft. DJ Blick mixes an extended set that ranges from motown to old skool hip hop to indi...' title='Sat 11/19 - 10p'>
+              <p><strong>Free</strong> Public Works <strong>Dance</strong> <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Find your fixie and follow the ride leader for the November edition of the San Francisco Midnight Mystery Ride on Saturday, November 19.&#x000A;&#x000A;Just make sure to bring provisions to share with others aft...' title='Sat 11/19 - 11:59p'>
+              <p>Midnight Mystery <strong>Bike</strong> Ride</p>
+            </div>
+            <div class='card alert-message' data-content='The 2011 Thread Show is back at the Metreon and bringing the best in emerging designers and independent fashion back to you. Shop from loads of trendsetting designers bringing you men’s and women’s...' title='Sun 11/20 - 11a'>
+              <p>Thread Indie Design & Fashion <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Join Pier 39 to kick-off the season with warmth, merriment and lots of holiday spirit. Families and friends are invited to Pier 39’s annual Tree Lighting Celebration to give hugs to some of your fa...' title='Sun 11/20 - 0p'>
+              <p>Pier 39 Holiday Tree Lighting Celebration</p>
+            </div>
+            <div class='card alert-message' data-content='The Hawai‘i Visitors and Convention Bureau and Hawaiian Airlines will transform Justin Herman Plaza into an “island paradise” complete with the sights, sounds and tastes of the Hawaiian Islands in ...' title='Sun 11/20 - 0p'>
+              <p>Hawaiian <strong>Music,</strong> Hula & Macadamia Nut Tasting</p>
+            </div>
+            <div class='card alert-message' data-content='To town, Santa is coming!&#x000A;&#x000A;Watch master LEGO builders construct a gigantic BMI-busting Star Wars Lego statue in Union Square all weekend beginning Friday, November 18th at Noon.&#x000A;&#x000A;A 12-foot-tall (an...' title='Sun 11/20 - 0p'>
+              <p>12-Foot-Tall Santa Yoda LEGO Building <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='A mammoth weekend at the historic Castro Theater chronicling the adventures of J. K. Rowling’s adolescent wizard Harry Potter and his best friends Ron Weasley and Hermione Granger. See these studen...' title='Sun 11/20 - 0p'>
+              <p>Day Two</p>
+            </div>
+            <div class='card alert-message' data-content='Music has the power to transport us instantly through time and space. Faster than Google Earth, a few bars and we’re “long ago and far away.”&#x000A;&#x000A;Antonin Dvorak’s Serenade for Strings is a musical pos...' title='Sun 11/20 - 3p'>
+              <p>SF Chamber Orchestra</p>
+            </div>
+            <div class='card alert-message' data-content='Enjoy a free concert by the San Francisco Chamber Orchestra’s debut artist Hilda Huang and jazz trombonist Wayne Wallace on Sunday, November 20 at Herbst Theater.&#x000A;&#x000A;Maestro Ben Simon will also be ho...' title='Sun 11/20 - 3p'>
+              <p><strong>Free</strong> SF Chamber Orchestra Concert</p>
+            </div>
+            <div class='card alert-message' data-content='Urban Bazaar will host “Snacks &amp; Crafts”, an art show featuring the work of Leilani Banayos and Michael Robins, two high school interns from City Arts and Technology High (CAT). Leilani and Michael...' title='Sun 11/20 - 5:30p'>
+              <p>Snacks and Crafts Student <strong>Art</strong> <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Kimya Dawson‘s latest album Thunder Thighs is the first solo album from the ex-Moldy Peach since the Grammy winning, platinum selling soundtrack from the movie Juno.&#x000A;&#x000A;As Kimya’s seventh album, the ...' title='Sun 11/20 - 8p'>
+              <p>Kimya Dawson <strong>Live</strong> In Concert</p>
+            </div>
+            <div class='card alert-message' data-content='Head down to John Colins Monday nights to catch Monday Night Football on their large projection screen and take advantage of $3 Coronas, Negra Modelos and Pacificos. Take $2 off all cocktails. Up t...' title='Mon 11/21 - 5:30p'>
+              <p>$3 Beer & Monday Night <strong>Football</strong></p>
+            </div>
+            <div class='card alert-message' data-content='This introductory workshop gives students the tools they need to develop a slackline practice that includes four basic modalities:  kneeling, standing, sitting, and arm balancing.&#x000A;&#x000A;All levels are w...' title='Mon 11/21 - 6:30p'>
+              <p><strong>Free</strong> Slackline Workshop</p>
+            </div>
+            <div class='card alert-message' data-content='Have a case of the Mondays? Wash it all away at Thee Parkside as they present Dinner &amp; A Movie.&#x000A;&#x000A;Treat yourself to a $5 dinner special and $1 Olympia beer. Then find a seat around 8pm as the Missio...' title='Mon 11/21 - 8p'>
+              <p><strong>Free</strong> Muppet <strong>Movie</strong> <strong>Marathon,</strong> $1 Beer and $5 <strong>Dinner</strong></p>
+            </div>
+            <div class='card alert-message' data-content='San Francisco’s only regularly recurring fashion show features the exciting collections of local, regional, and national designers and benefits the Harvey Milk Foundation.&#x000A;&#x000A;Free admission, complime...' title='Mon 11/21 - 8p'>
+              <p>Fashion <strong>Show,</strong> <strong>Free</strong> <strong>Cocktails</strong> & <strong>Free</strong> Food</p>
+            </div>
+          </div>
+        </section>
+        <section id='two-weeks-away'>
+          <div class='cards-header page-header'>
+            <h1>
+              Two Weeks Away
+              <small>(18 events)</small>
+            </h1>
+          </div>
+          <div class='cards'>
+            <div class='card alert-message' data-content='The enchanting story of the Nutcracker is brought to life in a unique and child friendly way.&#x000A;&#x000A;Photos with Sugarplum Fairy, The Nutcracker, Mouse King and other Characters. The San Francisco Youth ...' title='Sat 11/26 - 11:30a'>
+              <p>Nutcracker at Stonestown Galleria</p>
+            </div>
+            <div class='card alert-message' data-content='Every Holiday season haute mélange (a native Cole Valley Jeweler voted  Best of the Bay 2010) hosts their annual Handmade Holiday Trunk Show  Series that showcases 17 brilliant new and upcoming tal...' title='Sat 11/26 - 0p'>
+              <p>Handmade Holiday Trunk <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Yoshi’s Jazz Club SF celebrates Bay Area talent with a series of free concerts in their lounge. From straight jazz to multimedia sampling, and from Bossa Nova to African jazz, this series highlight...' title='Sat 11/26 - 6p'>
+              <p>Broken Strings</p>
+            </div>
+            <div class='card alert-message' data-content='The Babes of Comedy is a free comedy show featuring some of the Bay Area’s funny women at 50 Mason Social House.&#x000A;&#x000A;The lineup features Caitlin Gill, a regular at Cobbs and the Punchline, Eloisa Brav...' title='Sat 11/26 - 7p'>
+              <p>Babes of <strong>Comedy</strong> <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Come to a comedy show where dorks welcome, dweebs are allowed and point dexters might not be old enough. This 21+ show is free to attend and there will be drink specials all night.&#x000A;&#x000A;This is nerd co...' title='Sat 11/26 - 7p'>
+              <p>Nerd <strong>Comedy</strong> Night “Call of Dookie”</p>
+            </div>
+            <div class='card alert-message' data-content='It’s the Saturday after Thanksgiving. That gives you two whole days to finish digesting –  then it’s time for Berlin-style ping pong action. This party will be the triumphant holiday homecoming for...' title='Sat 11/26 - 9p'>
+              <p>American Tripps Berlin-Style Ping Pong</p>
+            </div>
+            <div class='card alert-message' data-content='Don’t spend Thanksgiving weekend simply ‘expanding’ your carbon footprint on the couch. Come ‘decrease’ it on the dance floor.&#x000A;&#x000A;Music by Heroes of the New Media, Great Girls Blouse, DJ set by Deep ...' title='Sat 11/26 - 10p'>
+              <p>Heroes of the New Media <strong>Dance</strong> <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Make the trek out to the Treasure Island Flea after way too much turkey this Thanksgiving weekend on Saturday, November 26 and Sunday, November 27.' title='Sun 11/27 - 0a'>
+              <p>Treasure Island Flea</p>
+            </div>
+            <div class='card alert-message' data-content='Get rid of that post-turkey pudge with expert hiking guide Alex Genadinik (the host of the 7-Hills of SF and wine scavenger hunt hike) on a walk to burn off your holiday gut this Sunday, September ...' title='Sun 11/27 - 0p'>
+              <p>Post-Thanksgiving Calorie Burn Hike</p>
+            </div>
+            <div class='card alert-message' data-content='Get a jump start on your holiday shopping in an intimate setting. Join Haute Mélange on November 26 and 27th to kick off the 4th Annual Handmade Holiday Trunk Show. This is the first of three weeke...' title='Sun 11/27 - 0p'>
+              <p>Handmade Holiday Trunk <strong>Show</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Ward off any holidays pounds with this free hour long pilates and yoga fusion class.&#x000A;Stick  around after class for a post workout smoothie potluck.&#x000A;&#x000A;Bring your  favorite pre-blended smoothie, kombu...' title='Sun 11/27 - 0p'>
+              <p><strong>Free</strong> Pilates Class & Smoothie Potluck</p>
+            </div>
+            <div class='card alert-message' data-content='We’ll all be suffering from post-Thanksgiving food comas in a week or so. What better way to cure your forthcoming food-induced ills than by getting together with the Lomographic Society for a nice...' title='Sun 11/27 - 2p'>
+              <p>Valencia Street Photowalk</p>
+            </div>
+            <div class='card alert-message' data-content='Join Madrone on Sunday afternoon for Game Day. They’ll provide the board games, you provide the strategy. Or just come in and watch a football game (viewer’s choice – just ask the bartender).&#x000A;&#x000A;Afte...' title='Sun 11/27 - 3p'>
+              <p><strong>Football,</strong> $3 Fernet & $2 PBR</p>
+            </div>
+            <div class='card alert-message' data-content='Put on your dancing shoes and make the weekend last longer with free Bluegrass and Beyond. Every Sunday they’ll have a different rotation of bands covering old-timey bluegrass, Americana, Folk, Blu...' title='Sun 11/27 - 3p'>
+              <p><strong>Free</strong> Bluegrass and Beyond</p>
+            </div>
+            <div class='card alert-message' data-content='Join the city for a night of remembrance of the lives and untimely deaths of supervisor Harvey Milk and mayor George Moscone on the anniversary of their assassinations in 1978 and commemorating the...' title='Sun 11/27 - 6p'>
+              <p>Harvey Milk and Moscone Candlelight March and Vigil</p>
+            </div>
+            <div class='card alert-message' data-content='After you’ve given thanks and seen your loved ones and cooked, served, feasted, rested and all the other things people tend to do on Thanksgiving weeked, come down to Bazaar Cafe for your monthly C...' title='Sun 11/27 - 6p'>
+              <p><strong>Free</strong> Classical Concert Night</p>
+            </div>
+            <div class='card alert-message' data-content='Solo Sundays, a monthly showcase of up and coming solo theater pieces, enjoy a Thanksgiving weekend show with Beth McLaughlin and David Caggiano.&#x000A;&#x000A;With Here to See the World Beth McLaughlin renders...' title='Sun 11/27 - 7p'>
+              <p>Solo Sundays</p>
+            </div>
+            <div class='card alert-message' data-content='Join the Castro neighborhood as they light their 2011 holiday tree in the middle of this historic district. Donna Sachet will emcee with musical entertainment provided by the Lesbian/Gay Chorus, th...' title='Mon 11/28 - 6p'>
+              <p>Castro Tree Lighting Ceremony</p>
+            </div>
+          </div>
+        </section>
+        <section id='one-month-away'>
+          <div class='cards-header page-header'>
+            <h1>
+              One Month Away
+              <small>(5 events)</small>
+            </h1>
+          </div>
+          <div class='cards'>
+            <div class='card alert-message' data-content='For all those who grew up in the bay... An EPIC REUNION has been planned&#x000A;&#x000A;&#x000A;LINEUP IS SET!!! &#x000A;http://67.170.218.92/massive/&#x000A;Private Event @ Manor West in SF for the night!&#x000A;Tickets here: Only $10&#x000A;&#x000A;--...' title='Thu 12/22 - 9p'>
+              <p>The Massive Reunion Let The Countdown Begin!</p>
+            </div>
+            <div class='card alert-message' data-content='$125 Tix Sold Out.  $150 Tix Sold Out.  $165 Tix Still Available While They Last.   This event will sell out so secure your plans today!  http://newyearsball2012.eventbrite.com/&#x000A;___________________...' title='Sat 12/31 - 9p'>
+              <p>NEW YEARS BALL 2012 | Clift Hotel | Open Bar | Presented by Justin Roja</p>
+            </div>
+            <div class='card alert-message' data-content='BUY YOUR PRE SALLE TICKET NOW AT http://www.eventbee.com/v/alist2012nye/t/brazil&#x000A;&#x000A; and save up to 60%&#x000A;Ticket prices will increase as the date of the event approaches absolutely No Refunds&#x000A;&#x000A;&#x000A;NEW YEA...' title='Sat 12/31 - 9:30p'>
+              <p>PASSPORT TO THE WORLD NEW YEAR'S EVE 2012 @ WESTIN SAINT FRANCIS HOTEL</p>
+            </div>
+            <div class='card alert-message' data-content="Start the new year off right!&#x000A;&#x000A;FREE to play!&#x000A;5 BEERS for $10&#x000A;Games: Flip Cup, Beer Pong, Relays&#x000A;&#x000A;--&gt; Everyone's placed on a team based on their country (to make&#x000A;it easy to meet people).  There is a..." title='Wed 1/4 - 8:30p'>
+              <p>SF BEER OLYMPICS! <strong>FREE!</strong> Cheap Beers! Wed. Jan 4th, 2012!</p>
+            </div>
+            <div class='card alert-message' data-content="Hi everyone!&#x000A;&#x000A;We're having a Farewell Party for a friend Kimo Lee Hosted by Agent Caitlyn &amp; Friends!  This is a Private Party open to all of our friends and friends of friends because we've booked ..." title='Fri 1/6 - 10p'>
+              <p>Farewell <strong>Party</strong> for Kimo hosted by: Agent Caitlyn & friends</p>
+            </div>
+          </div>
+        </section>
+        <section id='far-far-away'>
+          <div class='cards-header page-header'>
+            <h1>
+              Far Far Away
+              <small>(21 events)</small>
+            </h1>
+          </div>
+          <div class='cards'>
+            <div class='card alert-message' data-content='We welcome you to explore your deepest hearts desire toward creating a life where you experience more than just a “job,” more fulfilling than a “career,” and ultimately provides you with a vehicle ...' title='Sat 1/14 - 8:30a'>
+              <p><strong>Yoga</strong> Teacher <strong>Training</strong> - 300 <strong>Hour</strong> Advanced Certification</p>
+            </div>
+            <div class='card alert-message' data-content='Another Edition of:&#x000A;Burnlesque 2012&#x000A;&#x000A;Come frolic with your fellow freaks in an aural forest of fun and unleash your inner animal. Fiery, furry burlesque acts will flirt your face off while the fine...' title='Sat 1/21 - 9p'>
+              <p>Burnlesque: Animal Style</p>
+            </div>
+            <div class='card alert-message' data-content='The Guardsmen Celebrity Dinner and Sports Auction has been a signature fundraising activity of The Guardsmen for twenty three years and is one of the premier charity sports auctions in the Bay Area...' title='Thu 2/2 - 5:30p'>
+              <p>The 24th Annual Guardsmen Sports Auction & Celebrity <strong>Dinner</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Come to Asian Art Museum on Sunday, February 12, 2012 for a special free day – including free entry to Maharaja: Splendors of India’s Royal Courts.&#x000A;&#x000A;Explore the life and times of India’s great king...' title='Sat 2/11 - 0a'>
+              <p><strong>Free</strong> <strong>Museum</strong> Day and Maharaja Exhibit</p>
+            </div>
+            <div class='card alert-message' data-content='What can you do in 90 seconds?&#x000A;&#x000A;NBC’s “America’s Got Talent” will be holding open-call auditions in San Fransisco, CA on Saturday, February 11 and Sunday, February 12. The auditions are free, and i...' title='Sat 2/11 - 8a'>
+              <p>America’s Got Talent Auditions</p>
+            </div>
+            <div class='card alert-message' data-content='Immerse yourself in the sights and sounds of San Francisco’s exhilarating Chinatown during one of the community’s most exciting times of the year.&#x000A;&#x000A;Enjoy dance and music from throughout Asia and ex...' title='Sat 2/11 - 10a'>
+              <p>2012 Chinatown Community Street Fair</p>
+            </div>
+            <div class='card alert-message' data-content='Don’t miss the opportunity for you and a friend to enjoy this worldwide exclusive presentation of 50 exquisite paintings by 16th-century Venetian artists including Titian, Giorgione, Veronese, Tint...' title='Sun 2/12 - 0a'>
+              <p>Masters of Venice VIP Tickets</p>
+            </div>
+            <div class='card alert-message' data-content='Meet at the Schoolhouse Monument at Portsmouth Square for a tour of Commercial Street, San Francisco’s original shoreline, and the Jackson Square historic district.' title='Sun 2/12 - 10a'>
+              <p>Gold Rushers, Shanghaiiers and Jazz Dancers</p>
+            </div>
+            <div class='card alert-message' data-content='Experience the unique celebration of beer and running at the third annual SF Beer Week Run in 2012. The course starts and ends at Social Kitchen and Brewery and runs five miles through Golden Gate ...' title='Sun 2/12 - 11a'>
+              <p>3rd Annual SF Beer Week Run</p>
+            </div>
+            <div class='card alert-message' data-content='This is a six-mile hike through some hills, that visits a few parks.&#x000A;&#x000A;It will start at Mt. Sutro Forest, go to Corona Heights Park, then go to Buena Vista Park, and then to a pub on Haight Street. ...' title='Sun 2/12 - 1p'>
+              <p>3 Peaks & A Pub Hike</p>
+            </div>
+            <div class='card alert-message' data-content='The Cartoon Art Museum welcomes authors Mark Long and Jim Demonakos and artist Nate Powell as they discuss The Silence of Our Friends, their graphic novel chronicling the American Civil Rights Move...' title='Sun 2/12 - 1p'>
+              <p>Civil Rights Graphic Novel Author & Artist <strong>Talk</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Sunday is Funday at The Cafe in The Castro with 2 for 1 drinks, music videos spun by VJ Twist Mix and a few sexy Go-Go boys and girls. &#x000A;&#x000A;They’ll also be serving up cheap hamburgers, hot dogs, hot l...' title='Sun 2/12 - 3p'>
+              <p>Sunday Funday <strong>Dance</strong> <strong>Party</strong> and BBQ</p>
+            </div>
+            <div class='card alert-message' data-content='Comstock Saloon, SF’s throwback saloon on the edge of the Financial District hosts Honky Tonk Sundays. In the spirit of the wild west, guests can experience tunes from DJ Blaze Orange’s vinyl colle...' title='Sun 2/12 - 4p'>
+              <p>Americana DJs & Drink Specials</p>
+            </div>
+            <div class='card alert-message' data-content='Follow the L until it ends on Tuesdays after work and get rewarded with free hot dogs soaked in beer each Tuesday night at The Riptide, a great little 1940s-era dive bar at the edge of San Francisc...' title='Sun 2/12 - 4p'>
+              <p>Tuesdays</p>
+            </div>
+            <div class='card alert-message' data-content='Follow the L until it ends on Fridays after work and get rewarded with grubbing on free home cookin’ from Alisha.&#x000A;&#x000A;Each week she whips up home-style food that ranges from Blushin bunnies, Chili con...' title='Sun 2/12 - 4p'>
+              <p>Alisha’s <strong>Free</strong> Home Cookin’ Fridays</p>
+            </div>
+            <div class='card alert-message' data-content='Every Monday at Madrone, dance the night away with hosts DJ Gordo Cabeza and Timoteo Gigante and resident DJS spinning originals, exclusive remixes, and close relatives of your favorite Motown song...' title='Sun 2/12 - 6p'>
+              <p>Motown Mondays</p>
+            </div>
+            <div class='card alert-message' data-content='Get Krazy for Karaoke every Monday at the Knockout. Chow down on free pizza by Delluva (while supplies last) with your host Little Amy. Come belt it out and drink it down.&#x000A;&#x000A;From 5pm till 9pm take $...' title='Sun 2/12 - 6p'>
+              <p><strong>Free</strong> Pizza <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Self-billed as “The World’s Most Creative Happy Hour, bring a Friend, paint a Masterpiece. ”So you think you can Paint?”, was such a hit during the 2 Blocks of Art festival, that Club Six decided t...' title='Sun 2/12 - 6p'>
+              <p>“So You Think You Can Paint?” <strong>Art</strong> <strong>Party</strong></p>
+            </div>
+            <div class='card alert-message' data-content='Join “Classical Revolution” the weekly chamber music night, at its weekly residency at the Mission District’s Revolution Cafe.&#x000A;&#x000A;Each week they feature different local and visiting musicians in our ...' title='Sun 2/12 - 8p'>
+              <p>Classical Revolution Chamber <strong>Music</strong> Jam</p>
+            </div>
+            <div class='card alert-message' data-content='Every Monday Night at Danny Coyle’s is Game Night. Enjoy $4 Stella Artois from 8pm till close.&#x000A;&#x000A;Been dying to dust off your Battleships, Jengas or Connect Fours? What about that poker night you’ve ...' title='Sun 2/12 - 8p'>
+              <p>Monday Board <strong>Game</strong> Night at Danny Coyle’s</p>
+            </div>
+            <div class='card alert-message' data-content='Every Monday it’s “Crazy Mondays With The Kidz” – the Beauty Bar’s  all Hip-Hop night starring The Kidz –  a DJ collective that spin new and retro hip-hop.  Buy a Jameson shot and get a free PBR al...' title='Sun 2/12 - 9p'>
+              <p>PBR <strong>Party</strong> and “Crazy” Hip Hop <strong>Dance</strong> Night</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class='footer'>
+      <div class='container'>
+        <p class='pull-right'>
+          <a href='#'>Back to top</a>
+        </p>
+        <p>
+          Designed with
+          <a href='http://twitter.github.com/bootstrap' target='_blank'>Bootstrap</a>
+          and
+          <a href='http://masonry.desandro.com' target='_blank'>Masonry</a>
+          <br>
+          A side project by
+          <a href='https://github.com/jasonzhao6' target='_blank'>Jason Zhao</a>
+        </p>
+      </div>
+    </footer>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery_ujs.js" type="text/javascript"></script>
+    <script src="assets/jquery.masonry.min.js" type="text/javascript"></script>
+    <script src="assets/jqueryui.min.js" type="text/javascript"></script>
+    <script src="assets/bootstrap-twipsy.js" type="text/javascript"></script>
+    <script src="assets/bootstrap-popover.js" type="text/javascript"></script>
+    <script src="assets/bootstrap-scrollspy.js" type="text/javascript"></script>
+    <script src="assets/application.js" type="text/javascript"></script>
+    <script>
+      //<![CDATA[
+        $(window).load(function() {
+          $("body").scrollSpy("refresh");
+          $("section").disableSelection();
+          $(".card").popover({
+            offset: 2
+          });
+          $("#side-bar a").click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass("info");
+          });
+        });
+        $(function() {
+          $(".cards").masonry({
+            itemSelector: ".card",
+            isResizable: false
+          });
+          $(".card").css("display", "inline-block");
+        });
+      //]]>
+    </script>
+  </body>
+</html>

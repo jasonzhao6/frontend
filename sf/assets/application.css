@@ -1,0 +1,39 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+.text-shadow {
+  text-shadow: 0px 1px 0px #ffffff;
+  filter: 'dropshadow(color=#ffffff, offx=0, offy=1)';
+}
+a {
+  cursor: pointer;
+}
+a small {
+  font-size: .8em;
+}
+.container {
+  width: 1080px;
+}
+.topbar {
+  -moz-opacity: 0.95;
+  -khtml-opacity: 0.95;
+  opacity: 0.95;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity_times_100)';
+  filter: 'progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity_times_100)';
+  filter: 'alpha(opacity=@opacity_times_100)';
+}
+.footer {
+  text-shadow: 0px 1px 0px #ffffff;
+  filter: 'dropshadow(color=#ffffff, offx=0, offy=1)';
+  background-color: #EEE;
+  border-top: solid 1px #E5E5E5;
+  padding: 30px 0;
+  position: relative;
+  margin-top: 20px;
+  z-index: 10;
+}
+.footer a:visited {
+  color: #0069D6;
+}

@@ -27,7 +27,6 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
   body {
     color: #FFF;
     font: 300 1em 'Lato', 'Helvetica Neue', Tahoma, sans-serif;
-    padding-top: 50px;
   }
   img, object, embed {
     max-width: 100%;
@@ -119,14 +118,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     background-image:         linear-gradient(to bottom, #39393B, #222325);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#39393B', endColorstr='#222325');
     border-bottom: 1px solid #343434;
-    left: 0;
-    right: 0;
     overflow: hidden;
     padding: 0 2% 4px;
-    position: fixed;
-    top: 0;
     line-height: 1.875em;
-    z-index: 1;
   }
   #logo {
     font-weight: bold;
@@ -152,6 +146,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     display: none;
   }
   #content {
+    margin-top: 20px;
     padding: 0 20px;
     position: relative;
   }
@@ -185,6 +180,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     color: #000;
     margin: -6px 5px 0 5px;
     position: relative;
+    zoom: 1;
   }
   .situation:after {
     clear: both;
@@ -194,6 +190,15 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     font-size: 0;
     visibility: hidden;
   }
+  .situation .looking-for-edit {
+    color: #333;
+    cursor: pointer;
+    font-weight: 700;
+    position: absolute;
+    right: 5px;
+    text-shadow: 1px -1px 1px #EEE;
+    top: -2px;
+  }  
   .situation h4 {
     font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
     font-size: 0.9375em;
@@ -217,10 +222,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     vertical-align: top;
   }
   .roommates {
-    padding: 12px 20px;
+    padding: 12px 20px 12px 0;
     text-align: right;
     float: right;
-    width: 59%;
   }
   .roommates img {
     height: 30px;
@@ -251,6 +255,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     color: #333333;
+    display: none;
     font-family: 'Montserrat', Myriad Pro, Univers, 'Trebuchet MS', sans-serif;
     font-size: 1em;
     font-weight: 400;
@@ -262,7 +267,6 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     min-width: 290px;
     width: 100%;
     z-index: 2;
-/*    display: none;*/
   }
   .situation .close {
     cursor: pointer;
@@ -338,11 +342,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#D4000000, endColorstr=#D4000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D4000000, endColorstr=#D4000000)";
     border: 1px solid #CCC;
-    padding: 10px 40px 35px;
+    padding: 15px 30px;
     margin-top: 10px;
   }
   #feed article {
-    margin-top: 25px;
+    margin: 13px 0;
   }
   #feed h3 {
     color: #AAAAAA;
@@ -469,6 +473,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
   #topbar {
     font-size: 1.111em;
   }
+  .situation em {
+    padding: 0 10px 3px 15px;
+  }
+  .situation h5 {
+    padding: 12px 0 20px 15px;
+  }
   .situation .selectBox {
     line-height: 1.714em;
   }
@@ -476,6 +486,9 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
     padding: 12px 14px;
     text-align: left;
     width: 40%;
+  }
+  #feed {
+    padding: 12px 30px;
   }
   footer {
     font-size: 1.111em;
@@ -490,22 +503,30 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 
 @media handheld, only screen and (max-width: 480px) {
 
-  body {
-    padding: 46px 0 10px;
+  nav {
+    display: none;
   }
-  #global-menu {
+  #global-menu.mobile-styling {
+    background-color: #39393B;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: block;
+    padding: 5px 5px 8px;
     position: absolute;
-    right: 100px;
-    top: 100px;
+    left: 0;
+    top: 34px;
+    width: 100%;
     z-index: 1;
   }
-  nav li {
+  #global-menu li {
     display: block;
   }
   #mobile-menu {
     display: block;
   }
   #content {
+    margin-top: 10px;
     padding: 0 10px;
   }
   #responsive-layout {

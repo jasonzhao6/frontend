@@ -1,0 +1,64 @@
+#side-bar {
+  margin: 64px 0 0 770px;
+  position: fixed;
+  width: 260px;
+  z-index: 1;
+}
+#side-bar > .filters {
+  padding: 0 0 14px 0;
+}
+#time-of-the-day > a.btn {
+  padding-left: 19px;
+  padding-right: 19px;
+}
+#time-of-the-day > a.btn:first-child {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+#days-of-the-week > a.btn {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#filter-shortcuts {
+  text-align: center;
+}
+#tag-cloud > a.btn {
+  margin-bottom: 5px;
+}
+#cards-layout {
+  margin-top: 55px;
+  width: 770px;
+}
+/* scroll-spy hack */
+#cards-layout section {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+.cards-header {
+  margin-top: 9px;
+  width: 748px;
+}
+.card {
+  cursor: pointer;
+  display: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 140px;
+  word-wrap: break-word;
+}
+.popover .arrow {
+  -moz-opacity: 0.72;
+  -khtml-opacity: 0.72;
+  opacity: 0.72;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity_times_100)';
+  filter: 'progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity_times_100)';
+  filter: 'alpha(opacity=@opacity_times_100)';
+}
+.popover .inner {
+  -moz-opacity: 0.95;
+  -khtml-opacity: 0.95;
+  opacity: 0.95;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity_times_100)';
+  filter: 'progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity_times_100)';
+  filter: 'alpha(opacity=@opacity_times_100)';
+}

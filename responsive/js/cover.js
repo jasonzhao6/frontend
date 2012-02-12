@@ -26,7 +26,7 @@
           $image.width('auto');
           $image.height('100%');
   			} else {
-          $image.css('top', Math.min(((windowSize.height - imageSize.height * windowSize.width / imageSize.width) / 2), 0));
+          $image.css('top', 0);
           $image.css('left', 0);
           $image.width('100%');
           $image.height('auto');

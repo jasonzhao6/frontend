@@ -2,12 +2,12 @@
 <html lang='en'>
 <head>
 	<meta charset='utf-8' />
-	<title>CrashPad.html</title>
+	<title>Responsive Web Design</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:300,700' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='vendor/css/jquery.selectBox.css' type='text/css' media='screen' />
 	<link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' />
-  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+  <script src='vendor/js/jquery-1.7.1.min.js'></script>
   <script src='vendor/js/jquery.selectBox.min.js'></script>
   <script type='text/javascript' charset='utf-8'>
     $(function() {
@@ -15,6 +15,18 @@
       $('#looking-for').selectBox();
       // Load user background image into css
       $('html').css('background-image', 'url(' + $('#background-cover').attr('src') + ')');
+      // Bind clicking action to mobile menu
+      $('#mobile-menu').click(function() {
+        $('#global-menu').toggleClass('mobile-styling');
+      });
+      // Bind clicking action to pullup tab
+      $('#handle').click(function() {
+        $('#trunk').toggle();
+      });
+      // Bind clicking action to situation editor
+      $('.situation .looking-for-edit, .situation .close').click(function() {
+        $('.situation .editor').toggle();
+      });
     });
   </script>
   <script src='vendor/js/html5.js'></script>
@@ -28,21 +40,19 @@
         <li><a href='#'>My profile</a></li>
         <li><a href='#'>Add my place</a></li>
         <li><a href='#'>Add current roommates</a></li>
-        <li><a href='#'>Favorites</a></li>
-        <li><a href='http://google.com'>Settings &#9662;&nbsp;</a></li>
+        <li><a href='#'>Settings</a></li>
       </ul>
     </nav>
     <nav id='mobile-menu'>
-      <a href='#'>Menu &#9662;&nbsp;</a>
+      <a href='#'>Menu &#9662;</a>
     </nav>
-    <div id='logo'>CrashPad</div>
   </header>
   <div id='content'>
   	<div id='responsive-layout'>
       <aside id='sidebar'>
         <div class='profile-pic-container'><img src='user-images/girl.jpg' /></div>
         <div class='situation'>
-          <h4><strong>Roommate</strong> wanted in</h4>
+          <h4><strong>Roommate</strong> wanted in</h4><sup class='looking-for-edit'>edit</sup>
           <em>Cole Valley, San Francisco, CA</em>
           <em>SOMA, San Francisco, CA</em>
           <em>Noe Valley, San Francisco, CA</em>
