@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>contentEditable</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
@@ -14,7 +15,6 @@
     <header>
       <aside id='search'>
         <input id='search-field' type='text' autocomplete='off' spellcheck='false' tab-index='1' placeholder='Search...' />
-        <img src='assets/images/search/clear.png' />
       </aside>
       <div id='control'>
         <button id='edit-btn' class='secondary'>Edit</button>
@@ -30,13 +30,14 @@
         </ul>
       </aside>
       <article id='document'>
+        <aside id='info'>Created: Fed 13, 2012&nbsp;&nbsp;By: Jason Zhao<br />Updated: Feb 13, 2012&nbsp;&nbsp;By: Jason Zhao</aside>
         <h1 id='title' class='editable'>Article Title</h1>
         <div id='body' class='editable'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget placerat magna. Vivamus laoreet justo in sem adipiscing vitae dignissim odio auctor. Quisque ullamcorper scelerisque felis sit amet tristique. Curabitur at massa in tellus accumsan convallis. Cras sit amet sagittis eros. Aliquam in purus sed arcu vehicula dignissim. Ut felis mi, pretium a rhoncus eget, placerat id quam. Suspendisse bibendum sapien non felis ornare laoreet. Suspendisse potenti. Morbi lobortis scelerisque elit, quis aliquam quam accumsan eget. Sed adipiscing nulla ac odio pharetra ultrices.</p>
-          <p>Integer lorem arcu, sagittis a faucibus a, tempus in ipsum. Nam sapien lorem, scelerisque facilisis porta quis, tincidunt in sapien. Nulla facilisi. Integer vitae interdum arcu. Mauris a pellentesque diam. Praesent condimentum ullamcorper malesuada. Nulla in nunc arcu. Vestibulum faucibus lacinia nibh, malesuada dignissim nibh euismod vel. Morbi a orci ipsum. Etiam quis felis eu mi porttitor tristique. Pellentesque vestibulum tellus et mauris auctor ut consectetur turpis posuere. Praesent magna arcu, blandit a accumsan non, adipiscing quis tortor. Duis consequat facilisis metus eu consequat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ac venenatis est. Cras iaculis quam nisi, ac viverra lectus.</p>
-          <p>Ut dignissim risus a justo bibendum tristique. Cras ac erat lorem, id convallis massa. Nulla eget mi eu tellus rhoncus aliquam fermentum at ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris fringilla imperdiet tincidunt. Ut id nulla leo. Integer sodales felis id nibh convallis sed porta felis bibendum. Cras elementum porta leo vitae consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris pretium nisl eget risus aliquam consectetur. Aliquam sollicitudin ligula at neque varius et tincidunt tortor lobortis. Vestibulum posuere, neque sit amet tristique vehicula, quam mauris tincidunt ligula, nec lobortis eros mi feugiat justo.</p>
-          <p>Sed commodo odio et mauris pellentesque in rutrum arcu malesuada. Suspendisse vel metus non lorem placerat aliquam vitae non leo. Duis risus lectus, aliquam eget cursus in, pharetra vel ante. Vestibulum egestas sapien et leo pharetra commodo. Pellentesque consequat scelerisque libero dapibus faucibus. Integer tincidunt laoreet eros id varius. Donec sem mauris, porttitor vitae suscipit a, pulvinar ut tellus. Nunc et dolor velit. Donec sed justo sit amet felis sollicitudin elementum. Suspendisse vel tincidunt odio. Quisque quis nulla sit amet sapien egestas posuere nec in lorem. Proin posuere sapien sit amet lectus pulvinar ultricies dapibus nec dui.</p>
-          <p>Fusce tempus eros eget ligula cursus consequat scelerisque mauris eleifend. Donec ultrices laoreet mauris at condimentum. Quisque at odio eu sapien tincidunt aliquet. Vivamus ornare, elit in viverra mattis, nisi elit porta dolor, eget cursus ante sem eget magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur vel magna nisl, ut sagittis dolor. Pellentesque lobortis turpis nec orci tincidunt tempor. In hac habitasse platea dictumst. Mauris auctor sagittis tellus, eu euismod tortor sollicitudin in. Pellentesque vitae leo eget purus mollis molestie. In quis enim nec quam vestibulum vestibulum ut vitae diam.</p>
+          <p>Having the right amount of characters on each line is key to the readability of your text. It shouldn’t merely be your design that dictates the width of your text, it should also be a matter of legibility.</p>
+          <p>The optimal line length for your body text is considered to be 50-60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable. So what’s the downsides of violating this range?</p>
+          <p>Too long – if a line of text is too long the visitor’s eye will have a hard time focusing on the text. This is because the length makes it difficult to get an idea of where the line starts and ends. Furthermore it can be difficult to continue from the correct line in large blocks of text.</p>
+          <p>Too short – if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too short lines also tend to stress people, making them begin on the next line before finishing the current one (hence skipping potentially important words). </p>
+          <p>It turns out that the subconscious mind is energized when jumping to the next line (as long as it doesn’t happen too frequently, see above bullet point). At the beginning of every new line the reader is focused, but this focus gradually wears off over the duration of the line (“Typographie”, E. Ruder).</p>
         </div>
       </article>
     </div>

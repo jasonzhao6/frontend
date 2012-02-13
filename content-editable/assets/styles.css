@@ -5,12 +5,13 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 /*------*/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, default;
+  font-size: 1.0625em;
 }
 h1 {
   font-size: 2em;
 }
 p {
-  line-height: 1.25em;
+  line-height: 1.412em;
   margin-bottom: 16px;
 }
 
@@ -64,8 +65,9 @@ body {
   background: url(https://manage.stripe.com/img/merch/toolbar/divider.png) 0 0 no-repeat;
   float: right;
   height: 50px;
+  margin-right: 2px;
   text-align: right;
-  width: 74%;
+  width: 70%;
 }
 #content {
   background-color: #F1F3F5;
@@ -73,20 +75,27 @@ body {
 }
 #listing {
   float: left;
-  width: 26%;
+  width: 30%;
 }
 #document {
   background-color: #fff;
   float: right;
-  width: 74%;
+  width: 70%;
+}
+#info {
+  color: #CCC;
+  font-size: .375em;
+  font-weight: normal;
+  float: right;
+  text-align: right;
 }
 #title {
   padding: 0 10px;
-  margin: 20px 10px 0;
+  margin: 21px 15px 0;
 }
 #body {
   padding: 5px 10px;
-  margin: 10px;
+  margin: 10px 15px;
 }
 
 /*--------*/
@@ -104,18 +113,33 @@ body {
   height: 28px;
   outline: 0;
   padding: 0 13px 1px 28px;
-  -webkit-transition: width .2s linear;
-  -moz-transition: width .2s linear;
-  -o-transition: width .2s linear;
-  transition: width .2s linear;
   width: 120px;
 }
-#search-field:focus {
-  -webkit-transition: width .2s linear;
-  -moz-transition: width .2s linear;
-  -o-transition: width .2s linear;
-  transition: width .2s linear;
-  width: 200px;
+
+/*------------------*/
+/* Search Animation */
+/*------------------*/
+@media only screen and (min-width: 940px) {
+  #search-field {
+    background: url(images/search/left_center.png);
+    border: 0;
+    font-size: .75em;
+    height: 28px;
+    outline: 0;
+    padding: 0 13px 1px 28px;
+    -webkit-transition: width .2s linear;
+    -moz-transition: width .2s linear;
+    -o-transition: width .2s linear;
+    transition: width .2s linear;
+    width: 120px;
+  }
+  #search-field:focus {
+    -webkit-transition: width .2s linear;
+    -moz-transition: width .2s linear;
+    -o-transition: width .2s linear;
+    transition: width .2s linear;
+    width: 200px;
+  }
 }
 
 /*-----------------*/
@@ -136,3 +160,25 @@ body {
 /*--------*/
 /* Mobile */
 /*--------*/
+
+/*---------------*/
+/* Large Desktop */
+/*---------------*/
+@media only screen and (min-width: 1330px) {
+  
+  /*------*/
+  /* Font */
+  /*------*/
+  body {
+    font-size: 1.5em;
+  }
+  
+  /*--------*/
+  /* Layout */
+  /*--------*/
+  #container {
+    max-width: 1120px;
+    min-width: 1120px;
+  }
+  
+}
