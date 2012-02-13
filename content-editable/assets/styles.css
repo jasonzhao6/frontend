@@ -33,11 +33,11 @@ body {
 }
 #container {
   margin: 0 auto;
-  max-width: 940px;
-  min-width: 720px;
+  max-width: 960px;
+  min-width: 768px;
 }
 #topbar, #notice, #main, footer {
-  margin: 0 20px;
+  margin: 0 30px;
 }
 #main header {
   background: #2f7ed6;
@@ -54,20 +54,20 @@ body {
   -webkit-box-shadow: inset 0 1px 0 #75acea;
   -moz-box-shadow: inset 0 1px 0 #75acea;
   box-shadow: inset 0 1px 0 #75acea;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
 }
 #search {
   float: left;
-  margin: 12px 0 0 10px;
+  margin: 17px 0 0 14px;
 }
 #control {
-  background: url(https://manage.stripe.com/img/merch/toolbar/divider.png) 0 0 no-repeat;
+  background: url(https://manage.stripe.com/img/merch/toolbar/divider.png) 0 11px no-repeat;
   float: right;
-  height: 50px;
+  height: 60px;
   margin-right: 2px;
   text-align: right;
-  width: 70%;
+  width: 69%;
 }
 #content {
   background-color: #F1F3F5;
@@ -80,7 +80,7 @@ body {
 #document {
   background-color: #fff;
   float: right;
-  width: 70%;
+  width: 69%;
 }
 #info {
   color: #CCC;
@@ -91,11 +91,11 @@ body {
 }
 #title {
   padding: 0 10px;
-  margin: 21px 15px 0;
+  margin: 21px 20px 0;
 }
 #body {
   padding: 5px 10px;
-  margin: 10px 15px;
+  margin: 10px 20px;
 }
 
 /*--------*/
@@ -113,32 +113,21 @@ body {
   height: 28px;
   outline: 0;
   padding: 0 13px 1px 28px;
-  width: 120px;
+  width: 140px;
 }
 
 /*------------------*/
 /* Search Animation */
 /*------------------*/
-@media only screen and (min-width: 940px) {
+@media only screen and (min-width: 960px) {
   #search-field {
-    background: url(images/search/left_center.png);
-    border: 0;
-    font-size: .75em;
-    height: 28px;
-    outline: 0;
-    padding: 0 13px 1px 28px;
     -webkit-transition: width .2s linear;
     -moz-transition: width .2s linear;
     -o-transition: width .2s linear;
     transition: width .2s linear;
-    width: 120px;
   }
   #search-field:focus {
-    -webkit-transition: width .2s linear;
-    -moz-transition: width .2s linear;
-    -o-transition: width .2s linear;
-    transition: width .2s linear;
-    width: 200px;
+    width: 234px;
   }
 }
 
